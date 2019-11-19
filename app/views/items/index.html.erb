@@ -1,0 +1,8 @@
+<h1>Items Index View</h1>
+
+<% @items.each do |item| %>
+<h2>Name: <%=item.item_name%></h2>
+<p>Description: <%=item.item_description%></p>
+<p>Quantity: <%=item.quantity%></p>
+<p>Size: <%=item.size%></p>
+<% end %>
