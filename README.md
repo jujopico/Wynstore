@@ -66,4 +66,5 @@ This is a boilerplate Rails project that uses:
 * `heroku run rails db:migrate`
 * _optional_: `heroku run rails db:seed`
 
-![](readme_assets/images/Wynstore.png)
+![](readme_assets/images/wynstore_erd.png)
+
