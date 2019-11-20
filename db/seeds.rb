@@ -1,4 +1,5 @@
 Item.destroy_all
+User.destroy_all
 
 shirt1 = Item.create(
   item_name:"Miami Vice Shirt", 
@@ -21,3 +22,6 @@ shirt2 = Item.create(
 )
 
 puts "Database seeded with #{Item.count} items!"
+
+User.create(email: 'some@guy.com', password: 'password',)
+User.create(email: 'another@guy.com', password: 'password2',)
