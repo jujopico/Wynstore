@@ -11,5 +11,9 @@
 
   <body>
     <%= yield %>
+    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+    <% if current_user %>
+      (<%= current_user.email %>)
+    <% end %>
   </body>
 </html>
