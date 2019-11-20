@@ -67,3 +67,4 @@ This is a boilerplate Rails project that uses:
 * _optional_: `heroku run rails db:seed`
 
 ![](readme_assets/images/wynstore_erd.png)
+
