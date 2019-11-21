@@ -1,5 +1,6 @@
 Item.destroy_all
 User.destroy_all
+Review.destroy_all
 
 shirt1 = Item.create(
   item_name:"Miami Vice Tee", 
@@ -99,6 +100,13 @@ shirt10 = Item.create(
   category:"shirt", 
   size:"XL",
   design:"Developer"
+)
+
+review 1 = Review.create(
+  rating: 5,
+  comments: "Hey this is awesome!",
+  user_id: 1,
+  item_id: 1
 )
 
 puts "Database seeded with #{Item.count} items!"
