@@ -15,8 +15,8 @@
       <%= f.text_field :comments %>
     </div>
     <div>
-      <label>Rating</label>
-      <%= f.text_field :rating %>
+      <%= f.label :rating, "Rating" %>
+      <%= f.number_field :rating, min: 1, max: 5, autocomplete: "off" %>
     </div>
     <%= f.submit %>
   <% end %>

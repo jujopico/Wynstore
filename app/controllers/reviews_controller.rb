@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
     @item = Item.find(params[:item_id])
     @review = @item.reviews.new(review_params)
     @review.user = current_user
-    redirect_to @item if review.save
+    redirect_to @item if @review.save
   end
 
   private 
