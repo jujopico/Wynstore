@@ -1,0 +1,9 @@
+<h1><%= @user.email%>'s Cart</h1>
+
+<% if @cartItems.present?%>
+<%@cartItems.each do |item|%>
+  <p><%= item.item.item_name%></p>
+<%end%>
+<% else %>
+<h1> Cart is empty, shop for items now!</h1>
+<%end %>

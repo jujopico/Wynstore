@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :items, only: [:index, :show] do 
     resources :reviews, only: [:create]
 end
+resources :carts, only: [:show]
   namespace :admin do
     root 'users#index'
     resources :users, only: [:index]
