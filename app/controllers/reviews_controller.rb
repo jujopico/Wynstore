@@ -10,4 +10,11 @@ class ReviewsController < ApplicationController
     def index
       @Reviews = Review.all
     end
+
+    private
+
+  def review_params
+    params.require(:review).permit(:rating, :comments)
+  end
+
   end
