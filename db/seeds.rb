@@ -102,7 +102,7 @@ shirt10 = Item.create(
   design:"Developer"
 )
 
-review 1 = Review.create(
+review1 = Review.create(
   rating: 5,
   comments: "Hey this is awesome!",
   user_id: 1,
@@ -111,5 +111,6 @@ review 1 = Review.create(
 
 puts "Database seeded with #{Item.count} items!"
 
-User.create(email: 'some@guy.com', password: 'password',)
-User.create(email: 'another@guy.com', password: 'password2',)
+User.create(email: 'some@guy.com', password: 'password', admin: false)
+User.create(email: 'another@guy.com', password: 'password2', admin: false)
+User.create(email: 'admin@email.com', password: 'password', admin: true)
