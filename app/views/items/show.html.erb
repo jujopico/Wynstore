@@ -1,6 +1,11 @@
 <div>
   Item Show
+  <br>
   <%= @item.item_name %>
+  <br>
+  <% @sizes.each do |size| %>
+  <%= size %>
+  <% end %>
   <br>
   <h5>Comments</h5>
   <% @item.reviews.each do |review| %>
@@ -21,3 +26,5 @@
     <%= f.submit %>
   <% end %>
 </div>
+
+

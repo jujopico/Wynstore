@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_21_224615) do
+ActiveRecord::Schema.define(version: 2019_11_22_002732) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,14 +31,23 @@ ActiveRecord::Schema.define(version: 2019_11_21_224615) do
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
+  create_table "item_sizes", force: :cascade do |t|
+    t.bigint "item_id", null: false
+    t.bigint "size_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["item_id"], name: "index_item_sizes_on_item_id"
+    t.index ["size_id"], name: "index_item_sizes_on_size_id"
+  end
+
   create_table "items", force: :cascade do |t|
     t.string "item_name"
     t.integer "quantity"
     t.text "item_description"
     t.float "price"
     t.string "category"
-    t.string "size"
     t.string "design"
+    t.string "item_ref"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -75,6 +84,12 @@ ActiveRecord::Schema.define(version: 2019_11_21_224615) do
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
+  create_table "sizes", force: :cascade do |t|
+    t.string "size_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -91,6 +106,8 @@ ActiveRecord::Schema.define(version: 2019_11_21_224615) do
   add_foreign_key "cart_items", "carts"
   add_foreign_key "cart_items", "items"
   add_foreign_key "carts", "users"
+  add_foreign_key "item_sizes", "items"
+  add_foreign_key "item_sizes", "sizes"
   add_foreign_key "orders", "carts"
   add_foreign_key "orders", "users"
   add_foreign_key "profiles", "users"
