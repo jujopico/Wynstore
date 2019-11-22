@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
 
   def show 
     @item = Item.find(params[:id])
-    @sizes = ItemSize.where(item_id: @item.id).map { |item_size| item_size.size.size_name }
+    @sizes = @item.sizes.map { |size| size.size_name }
     @reviews = Review.where(item_id: @item.id)
   end
 
