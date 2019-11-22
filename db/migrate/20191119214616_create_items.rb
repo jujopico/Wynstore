@@ -6,8 +6,8 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.text :item_description
       t.float :price
       t.string :category
-      t.string :size
       t.string :design
+      t.string :item_ref
 
       t.timestamps
     end
