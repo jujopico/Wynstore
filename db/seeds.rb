@@ -32,7 +32,15 @@ Item.all.each do |item|
   Size.all.each { |size| ItemSize.create(item_id: item.id, size_id: size.id) }
 end
 
+review1 = Review.create(
+  rating: 5,
+  comments: "Hey this is awesome!",
+  user_id: 1,
+  item_id: 1
+)
+
 puts "Database seeded with #{Item.count} items!"
 
-User.create(email: 'some@guy.com', password: 'password',)
-User.create(email: 'another@guy.com', password: 'password2',)
+User.create(email: 'some@guy.com', password: 'password', admin: false)
+User.create(email: 'another@guy.com', password: 'password2', admin: false)
+User.create(email: 'admin@email.com', password: 'password', admin: true)
