@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'hello_world', to: 'hello_world#index'
   root 'items#index'
+  resources :charges, :items, only: [:index]
   resources :items, only: [:index, :show] do 
     resources :reviews, only: [:create]
   end
