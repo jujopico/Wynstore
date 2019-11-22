@@ -1,13 +1,14 @@
 <div>
-  Item Show
-  <br>
-  <%= @item.item_name %>
-  <br>
+  <h2>Product Details</h2>
+  <h3><%= @item.item_name %></h3>
+  <p> Sizes:
   <% @sizes.each do |size| %>
-  <%= size %>
+  <button> <%= size %> </button>
   <% end %>
+  <p>Description: <%=@item.item_description%></p>
+  <p>Quantity: <%=@item.quantity%></p>
   <br>
-  <h5>Comments</h5>
+  <h3>Comments</h3>
   <% @item.reviews.each do |review| %>
     Comment: <%= review.comments %><br>
     Rating: <%= review.rating %>
