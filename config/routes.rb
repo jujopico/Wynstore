@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   resources :charges, :items, only: [:index]
   resources :items, only: [:index, :show] do 
     resources :reviews, only: [:create]
+end
+  namespace :admin do
+    root 'users#index'
+    resources :users, only: [:index]
   end
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
