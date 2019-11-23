@@ -1,0 +1,14 @@
+<h1><%= @user.email%>'s Cart</h1>
+<%total = 0.0%>
+<% if @cartItems.present?%>
+<%@cartItems.each do |item|%>
+  <span><%= item.item_size.item.item_name%></span>
+  <span>$<%= item.item_size.item.price%></span>
+  <span><%= item.item_size.size.size_name%></span>
+  <%total = total + item.item_size.item.price %>
+
+<%end%>
+<%= total%>
+<% else %>
+<h1> Cart is empty, shop for items now!</h1>
+<%end %>

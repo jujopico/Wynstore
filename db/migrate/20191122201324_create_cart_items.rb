@@ -2,7 +2,7 @@ class CreateCartItems < ActiveRecord::Migration[6.0]
   def change
     create_table :cart_items do |t|
       t.references :cart, null: false, foreign_key: true
-      t.references :item, null: false, foreign_key: true
+      t.references :item_size, null: false, foreign_key: true
 
       t.timestamps
     end

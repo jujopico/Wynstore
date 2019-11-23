@@ -17,6 +17,15 @@ shirt1 = Item.create(
   design:"Miami Vice",
   item_ref: 'MV-Shirt-1',
 )
+shirt1 = Item.create(
+  item_name:"Miami Vice Tee", 
+  quantity: 20, 
+  item_description:"This design is a nod to the Miami Heat vice jerseys. Let's go Heat!", 
+  price:19.99, 
+  category:"shirt", 
+  design:"Miami Vice",
+  item_ref: 'MV-Shirt-1',
+)
 
 shirt2= Item.create(
   item_name:"<Developer> Tee", 
