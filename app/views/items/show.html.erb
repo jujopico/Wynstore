@@ -2,9 +2,12 @@
   <h2>Product Details</h2>
   <h3><%= @item.item_name %></h3>
   <p> Sizes:
-  <% @sizes.each do |size| %>
-  <button> <%= size %> </button>
-  <% end %>
+  <%= form_with url: cart_items_path do |f| %>
+    <%= hidden_field_tag 'item_id', @item.id  %>
+    <% @sizes.each do |size| %>
+      <%= f.submit size %>
+    <% end %>
+<% end %>
   <p>Description: <%=@item.item_description%></p>
   <p>Quantity: <%=@item.quantity%></p>
   <br>
