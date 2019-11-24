@@ -10,7 +10,7 @@ end
 resources :carts, only: [:show] do 
   resources :orders, only: [:new, :create]
 end 
-resources :cart_items, only: [:create, :destroy]
+resources :cart_items, only: [:create, :update, :edit, :destroy]
   namespace :admin do
     root 'users#index'
     resources :users, only: [:index]

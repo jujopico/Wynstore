@@ -16,7 +16,7 @@ class CartItemsController < ApplicationController
   def destroy
     @item_to_destroy = CartItem.find_by_id(params[:id])
     @item_to_destroy.destroy
-    redirect_to cart_path
+    redirect_back fallback_location: "/carts"
   end
 
 end
