@@ -23,6 +23,9 @@
     <tr>
       <td><strong>Grand Total:</strong> $<%= total%></td>
     </tr>
+    <tr>
+      <%= link_to 'Checkout', new_cart_order_path(@cart) %>
+    </tr>
 </table>
 <% else %>
   <h1> Cart is empty, shop for items now!</h1>
