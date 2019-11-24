@@ -1,14 +1,29 @@
-<h1><%= @user.email%>'s Cart</h1>
+<h1><%= @user.email %>'s Cart</h1>
 <%total = 0.0%>
-<% if @cartItems.present?%>
-<%@cartItems.each do |item|%>
-  <span><%= item.item_size.item.item_name%></span>
-  <span>$<%= item.item_size.item.price%></span>
-  <span><%= item.item_size.size.size_name%></span>
-  <%total = total + item.item_size.item.price %>
-
-<%end%>
-<%= total%>
+<% if @cartItems.present? %>
+<table>
+  <tr>
+    <th>Item Name</th>
+    <th>Size</th>
+    <th>Price</th>
+    <th></th>
+  </tr>
+    <% @cartItems.each do |item| %>
+      <% total = total + item.item_size.item.price %>
+      <tr>
+        <td><%= item.item_size.item.item_name %></td>
+        <td><%= item.item_size.size.size_name %></td>
+        <td>$<%= item.item_size.item.price %></td>
+        <td><%= button_to 'Delete Item', cart_item_path(item),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <%end%>
+    <tr>
+      <td><strong>Grand Total:</strong> $<%= total%></td>
+    </tr>
+</table>
 <% else %>
-<h1> Cart is empty, shop for items now!</h1>
+  <h1> Cart is empty, shop for items now!</h1>
 <%end %>
