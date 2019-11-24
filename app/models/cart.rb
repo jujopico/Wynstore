@@ -3,6 +3,7 @@ class Cart < ApplicationRecord
   has_many :cart_items, dependent: :destroy
   has_many :item_sizes, through: :cart_items
   has_many :items, through: :item_sizes
+  has_one :order
 
   def create
     @cart = Cart.create()

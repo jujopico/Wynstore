@@ -1,0 +1,23 @@
+<%= form_with model: [@cart, @order], local: true do |form| %>
+    <%= form.text_field :shipping_info_id %>
+    <table>
+        <tr>
+            <th>Item Name</th>
+            <th>Size</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+        <% @cart_items.each do |item| %>
+        <tr>
+            <td><%= item.item_size.item.item_name %></td>
+            <td><%= item.item_size.size.size_name %></td>
+            <td>$<%= item.item_size.item.price %></td>
+        </tr>
+        <%end%>
+        <tr>
+            <td><strong>Grand Total:</strong> $<%= @total %></td>
+        </tr>
+    </table>
+
+    <%= form.submit %>
+<% end %>

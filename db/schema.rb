@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 2019_11_22_201324) do
 
   create_table "orders", force: :cascade do |t|
     t.string "shipping_info_id"
+    t.float "total"
     t.bigint "cart_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
