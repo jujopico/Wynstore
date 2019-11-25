@@ -11,6 +11,7 @@ resources :carts, only: [:show] do
   resources :orders, only: [:new, :create]
 end 
 resources :cart_items, only: [:create, :update, :edit, :destroy]
+resources :charges
   namespace :admin do
     root 'users#index'
     resources :users, only: [:index]
