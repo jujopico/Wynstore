@@ -18,17 +18,21 @@
     <br>
   <% end %>
   <hr>
-  <%= form_with model: [@item, @item.reviews.build], local: true do |f|  %>
-    <div>
-      <label> Comments </label>
-      <%= f.text_field :comments %>
-    </div>
-    <div>
-      <%= f.label :rating, "Rating" %>
-      <%= f.number_field :rating, min: 1, max: 5, autocomplete: "off" %>
-    </div>
-    <%= f.submit %>
-  <% end %>
+  <% unless guest_user %>
+    <%= form_with model: [@item, @item.reviews.build], local: true do |f|  %>
+      <div>
+        <label> Comments </label>
+        <%= f.text_field :comments %>
+      </div>
+      <div>
+        <%= f.label :rating, "Rating" %>
+        <%= f.number_field :rating, min: 1, max: 5, autocomplete: "off" %>
+      </div>
+      <%= f.submit %>
+    <% end %>
+    <%else%>
+   Sign in to make a commment <%= button_to 'Sign In', new_user_session_path, method: :create %> 
+  <%end%>
 </div>
 
 
