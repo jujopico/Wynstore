@@ -31,7 +31,10 @@
       <%= f.submit %>
     <% end %>
     <%else%>
-   Sign in to make a commment <%= link_to 'Sign In', new_user_session_path %> 
+    <%= link_to 'Sign In', new_user_session_path %> <br>
+    or <br>
+    <%= link_to 'Sign Up', new_user_session_path %> <br>
+    To make a comment
   <%end%>
 </div>
 
