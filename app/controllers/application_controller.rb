@@ -3,6 +3,11 @@ class ApplicationController < ActionController::Base
   before_action :set_profile
   before_action :set_cart
 
+  # if authentication is not working as expected later, this is the culprit
+  # skip_before_action :verify_authenticity_token
+
+  
+
   def set_profile
     @profile = current_or_guest_user&.profile || Profile.find_by(id: session[:profile_id]) || Profile.new
   end
@@ -20,4 +25,8 @@ class ApplicationController < ActionController::Base
       root_url
     end
   end
+  
+
+
+  
 end
