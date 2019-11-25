@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
     def index
         @orders = Order.all
     end
+
     def show
     end
 
@@ -14,6 +15,7 @@ class OrdersController < ApplicationController
     end 
 
     def create 
+        @cart = Cart.find(params[:cart_id])
         order = Order.new(order_params)
         total = @cart.items.reduce(0) { |acc, item| acc + item.price.round(2) }
         total = total.round(2)
@@ -21,8 +23,26 @@ class OrdersController < ApplicationController
         order.user = current_user
         order.cart = cart
         order.total = total
-        Cart.create(user_id: current_user.id)
-        redirect_to root_path if order.save
+        Cart.create(user: current_user)
+        stripe_total = (order.total * 100).round(2).to_i 
+
+    customer = Stripe::Customer.create(
+        :email => 'some@guy.com',
+        :card  => params[:stripeToken]
+    )
+
+    charge = Stripe::Charge.create(
+        :customer => customer.id,
+        :amount => stripe_total,
+        :description => 'description',
+        :currency => 'usd'
+    )
+
+    redirect_to root_path if order.save
+    
+    rescue Stripe::CardError => e
+        flash[:error] = e.message 
+        redirect_to charges_path
     end 
 
     private 
