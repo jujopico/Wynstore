@@ -20,10 +20,10 @@ class OrdersController < ApplicationController
         total = @cart.items.reduce(0) { |acc, item| acc + item.price.round(2) }
         total = total.round(2)
         cart = Cart.find(params[:cart_id])
-        order.user = current_user
+        order.user = current_or_guest_user
         order.cart = cart
         order.total = total
-        Cart.create(user: current_user)
+        Cart.create(user: current_or_guest_user)
         stripe_total = (order.total * 100).round(2).to_i 
 
     customer = Stripe::Customer.create(
