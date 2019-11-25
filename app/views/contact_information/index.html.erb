@@ -1,0 +1,23 @@
+<h1>Already an Wynthusiast?</h1><%= link_to 'Sign In', new_user_session_path %> <br>
+
+<%= form_with url: contact_information_index_path, method: :  %>
+
+
+
+
+<%= form_with url: root_url, method: :get, local: true do |form| %>
+  <%= form.search_field :term,
+      autocomplete: "off",
+      class: "form-control mb-2 #{'is-invalid' if @tasks.length.zero?}",
+      placeholder: "Search",
+      value: params[:term]&.strip %>
+  <div class="invalid-feedback">
+    <% if params[:term].present? %>
+      No results found for <%= params[:term] %>
+    <% else %>
+      No results match
+    <% end %>
+  </div>
+  <%= form.hidden_field :due, value: params[:due]  %>
+  <%= form.hidden_field :status, value: params[:status] %>
+<% end %>
