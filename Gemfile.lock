@@ -82,6 +82,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-guests (0.7.0)
+      devise
     dotenv (2.7.5)
     dotenv-rails (2.7.5)
       dotenv (= 2.7.5)
@@ -235,6 +237,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise
+  devise-guests
   dotenv-rails
   hirb
   jbuilder (~> 2.7)
