@@ -18,9 +18,10 @@
             <td><strong>Grand Total:</strong> $<%= @total %></td>
         </tr>
     </table>
-
+            <p><%= Rails.configuration.stripe[:publishable_key] %></p>
        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:secret_key] %>"
+       
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="A month's subscription"
           data-amount=<%@total%>
           data-locale="auto"></script>

@@ -21,10 +21,9 @@ class OrdersController < ApplicationController
         total = total.round(2)
         shipping_info_id = User.find(@user.id).profile
         order = Order.new(:cart_id => @cart.id,
-                        :user_id => @user.id,
-                        :total => total,
-                        :shipping_info_id => shipping_info_id)
-        
+                          :user_id => @user.id,
+                          :total => total,
+                          :shipping_info_id => shipping_info_id)
         cart = Cart.find(params[:cart_id])
         order.user = current_or_guest_user
         order.cart = cart
@@ -35,6 +34,7 @@ class OrdersController < ApplicationController
     customer = Stripe::Customer.create(
         :email => 'some@guy.com',
         :card  => params[:stripeToken]
+
     )
 
     charge = Stripe::Charge.create(
