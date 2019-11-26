@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get 'hello_world', to: 'hello_world#index'
   get 'items/index'
   root 'welcome#index'
-  get 'contact_information/index'
 
   resources :items, only: [:index, :show] do 
     resources :reviews, only: [:create]
@@ -20,6 +19,8 @@ Rails.application.routes.draw do
       resources :users, only: [:index]
       resources :orders, only: [:index]
   end
+
+  resources :profiles, only:[:show, :new, :create, :index, :update]
 
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
