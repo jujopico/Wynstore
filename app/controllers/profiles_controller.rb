@@ -9,15 +9,13 @@ class ProfilesController < ApplicationController
 
   def create
     @user = current_or_guest_user
-    profile = Profile.new(:name => params[:name], 
-                :shipping_address => params[:shipping_address],
-                :email => params[:email], 
-                :phone_number => params[:phone_number], 
-                :user_id=> params[:user_id])
+    profile = Profile.new(:name             => params[:name], 
+                          :shipping_address => params[:shipping_address],
+                          :email            => params[:email], 
+                          :phone_number     => params[:phone_number], 
+                          :user_id          => params[:user_id])
     if profile.save
-      redirect_to root_path 
-    else
-      puts "daaaaaaaaaamn"
+      redirect_to new_cart_order_path(@cart)
     end
   end
 
