@@ -1,4 +1,0 @@
-class ContactInformationController < ApplicationController
-
-
-end
