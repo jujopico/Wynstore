@@ -1,5 +1,4 @@
 <%= form_with model: [@cart, @order], local: true do |form| %>
-    <%= form.text_field :shipping_info_id %>
     <%= hidden_field_tag 'cart_id', @cart.id  %>
     <table>
         <tr>
@@ -21,7 +20,7 @@
     </table>
 
        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:secret_key] %>"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="A month's subscription"
           data-amount=<%@total%>
           data-locale="auto"></script>

@@ -1,0 +1,24 @@
+<div>
+<%= form_with(model: @profile, url: profiles_path, method: "post") do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :shipping_address %>
+    <%= form.text_field :shipping_address %>
+  </div>
+  <div>
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number %>
+  </div>
+  <div>
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <%= hidden_field_tag :user_id, @user.id  %>
+
+  <%= form.submit %>
+<% end %>
+</div>
