@@ -20,7 +20,6 @@
             <td><strong>Grand Total:</strong> <%= number_to_currency(@total * (1 + @rates)) %></td>
         </tr>
     </table>
-
        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="A month's subscription"
