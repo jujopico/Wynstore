@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def set_cart
-    @cart = Cart.find_or_create_by(user:safe_current_or_guest_user)
+    @cart = Cart.find_or_create_by(user: safe_current_or_guest_user)
   end
 
   def after_sign_in_path_for(resource)
