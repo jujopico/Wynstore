@@ -1,0 +1,18 @@
+<div>
+    <h1>Show page for <%= @user.email %></h1>
+    <% @orders.each do |order| %>
+
+        <h5>Order ID - <%= order[:id] %> Total: <%= order[:total] %></h5>
+        <ul>
+            <% order[:items].each do |item| %>
+                <%= item[:item_name]%>
+                <br>
+                <%= item[:item_size]%>
+                <br>
+                <%= item[:item_price]%>
+               <br>
+
+            <% end %>
+        </ul>
+    <% end %>
+</div>
