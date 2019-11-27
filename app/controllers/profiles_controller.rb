@@ -1,22 +1,32 @@
 class ProfilesController < ApplicationController
 
+
   def index
   end
 
   def new
     @user = current_or_guest_user
+    @states = 
+      [
+        'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 
+        'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MH', 
+        'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NJ', 
+        'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 
+        'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'
+      ]
+  
   end
 
   def create
     @user = current_or_guest_user
     profile = Profile.new(:name             => params[:name], 
-                          :shipping_address => params[:shipping_address],
+                          :address          => params[:address],
+                          :zipcode          => params[:zipcode],
+                          :city             => params[:city],
                           :email            => params[:email], 
                           :phone_number     => params[:phone_number], 
-                          :user_id          => params[:user_id])
-    if profile.save
-      redirect_to new_cart_order_path(@cart)
-    end
+                          :user             => current_or_guest_user)
+    redirect_to new_cart_order_path(@cart) if profile.save
   end
 
   private 
