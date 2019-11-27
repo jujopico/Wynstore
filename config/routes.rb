@@ -3,23 +3,24 @@ Rails.application.routes.draw do
   devise_for :users
   get 'hello_world', to: 'hello_world#index'
   get 'items/index'
+  get 'profile', to: 'user#show'
   root 'welcome#index'
-
   resources :items, only: [:index, :show] do 
     resources :reviews, only: [:create]
+end
+resources :carts, only: [:show] do 
+  resources :orders, only: [:new, :create]
+end 
+resources :cart_items, only: [:create, :update, :edit, :destroy]
+  namespace :admin do
+    root 'users#index'
+    resources :users, only: [:index, :show] do 
+      member do
+    resources :orders, only: [:index, :show]
+      end
   end
-
-  resources :carts, only: [:show] do 
-    resources :orders, only: [:new, :create]
-  end 
-
-  resources :cart_items, only: [:create, :update, :edit, :destroy]
-    namespace :admin do
-      root 'users#index'
-      resources :users, only: [:index]
-      resources :orders, only: [:index]
-  end
-
+end
+  
   resources :profiles, only:[:show, :new, :create, :index, :update]
 
   

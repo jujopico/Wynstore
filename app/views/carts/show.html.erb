@@ -1,5 +1,5 @@
 <h1><%= @user.email %>'s Cart</h1>
-<%total = 0.0%>
+<% total = 0.0 %>
 <% if @cartItems.present? %>
 <table>
   <tr>
@@ -21,7 +21,7 @@
       </tr>
     <%end%>
     <tr>
-      <td><strong>Grand Total:</strong> $<%= total.round(2)%></td>
+      <td><strong>Grand Total:</strong> $<%= number_to_currency(total)%></td>
     </tr>
     <tr>
       <%= link_to 'Checkout', profiles_path %>
