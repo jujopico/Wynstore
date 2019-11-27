@@ -23,6 +23,7 @@ class ProfilesController < ApplicationController
                           :address          => params[:address],
                           :zipcode          => params[:zipcode],
                           :city             => params[:city],
+                          :state            => params[:state],
                           :email            => params[:email], 
                           :phone_number     => params[:phone_number], 
                           :user             => current_or_guest_user)

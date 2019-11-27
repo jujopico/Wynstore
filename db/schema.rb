@@ -69,7 +69,6 @@ ActiveRecord::Schema.define(version: 2019_11_26_003122) do
     t.string "zipcode"
     t.string "city"
     t.string "state"
-    t.string "country"
     t.string "phone_number"
     t.string "email"
     t.bigint "user_id", null: false
