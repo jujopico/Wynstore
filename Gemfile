@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '>= 2.6'
 
+gem 'taxjar-ruby', require: 'taxjar'
 gem 'devise'
 gem 'hirb'
 gem 'react_on_rails'

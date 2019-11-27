@@ -4,3 +4,4 @@ class Item < ApplicationRecord
   has_many :item_sizes
   has_many :sizes, through: :item_sizes
 end
+

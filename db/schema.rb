@@ -65,7 +65,11 @@ ActiveRecord::Schema.define(version: 2019_11_26_003122) do
 
   create_table "profiles", force: :cascade do |t|
     t.string "name"
-    t.string "shipping_address"
+    t.string "address"
+    t.string "zipcode"
+    t.string "city"
+    t.string "state"
+    t.string "country"
     t.string "phone_number"
     t.string "email"
     t.bigint "user_id", null: false
