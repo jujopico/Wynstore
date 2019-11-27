@@ -1,5 +1,9 @@
 @import "font-awesome";
 
+nav{
+  top: -5px;
+}
+
 .navigation-bar {	
   margin: 0;
   height: 82px;	
@@ -10,15 +14,8 @@
   justify-content: space-between;
   align-items: center;
   font-size: 1.5rem;
-}
-
-.navbar-right{
-  display:flex;
-  margin:0;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 40%;
-  margin-right: 20px;
+  font-family: 'DolceVita';
+  letter-spacing: 2px;
 }
 
 .navbar-logo-name{
@@ -27,24 +24,50 @@
   height: 72px;
   align-items: center;
   margin-left: 10px;
+  font-family: 'DolceVita';
+  letter-spacing: 1.5px;
+  font-size: 2.7rem;
 }
 
 .navbar-logo-name img {
-  width: 50px;
-  height: 50px;
+  width: 57px;
+  height: 57px;
   margin-right: 7px;
-  margin-left: 15px;
+  margin-left: 5px;
+  font-family: 'DolceVita';
+  letter-spacing: 2px;
+  margin-right: 20px;
+}
+
+.navbar-right{
+  display: flex;
+  margin:0;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 40%;
+  margin-right: 60px;
+  font-family: 'DolceVita';
+  letter-spacing: 2px;
+}
+
+.login-or-register {
+  color: #173461;
+  font-size: 1rem;
+  margin-right: 15px;
+}
+
+.login-or-register a {
+  color: #173461;
+
 }
 
 .navbar-logo-name a {
   color: #173461;
+  font-family: 'DolceVita';
+  letter-spacing: 2px;
 }
 
 .shopping-cart-icon a {
   color: #173461;
 }
 
-.login-or-register a {
-  color: #173461;
-  font-size: 1rem;
-}

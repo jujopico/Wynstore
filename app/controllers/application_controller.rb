@@ -11,13 +11,13 @@ class ApplicationController < ActionController::Base
   end
 
   def set_profile
-    @profile = current_or_guest_user&.profile || Profile.find_by(id: session[:profile_id]) || Profile.new
+    @profile = safe_current_or_guest_user&.profile || Profile.find_by(id: session[:profile_id]) || Profile.new
   end
 
   protected
 
   def set_cart
-    @cart = Cart.find_or_create_by(user:current_or_guest_user)
+    @cart = Cart.find_or_create_by(user:safe_current_or_guest_user)
   end
 
   def after_sign_in_path_for(resource)
