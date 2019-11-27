@@ -5,7 +5,7 @@ class ProfilesController < ApplicationController
   end
 
   def new
-    @user = current_or_guest_user
+    @user = safe_current_or_guest_user
     @states = 
       [
         'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 
@@ -26,7 +26,7 @@ class ProfilesController < ApplicationController
                           :state            => params[:state],
                           :email            => params[:email], 
                           :phone_number     => params[:phone_number], 
-                          :user             => current_or_guest_user)
+                          :user             => safe_current_or_guest_user)
     redirect_to new_cart_order_path(@cart) if profile.save
   end
 
