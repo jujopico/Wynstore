@@ -18,7 +18,7 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    @user = current_or_guest_user
+    @user = safe_current_or_guest_user
     profile = Profile.new(:name             => params[:name], 
                           :address          => params[:address],
                           :zipcode          => params[:zipcode],

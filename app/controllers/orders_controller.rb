@@ -18,7 +18,7 @@ class OrdersController < ApplicationController
     end 
 
     def create 
-        @user = current_or_guest_user
+        @user = safe_current_or_guest_user
         @cart = Cart.find(params[:cart_id])
         total = @cart.items.reduce(0) { |acc, item| acc + item.price.round(2) }
         total = total.round(2)
@@ -28,10 +28,10 @@ class OrdersController < ApplicationController
                           :total => total,
                           :shipping_info_id => shipping_info_id)
         cart = Cart.find(params[:cart_id])
-        order.user = current_or_guest_user
+        order.user = safe_current_or_guest_user
         order.cart = cart
         order.total = total
-        Cart.create(user: current_or_guest_user)
+        Cart.create(user: safe_current_or_guest_user)
         stripe_total = (order.total * 100).round(2).to_i 
 
     customer = Stripe::Customer.create(

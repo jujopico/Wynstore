@@ -5,21 +5,20 @@
       <%= link_to "Wynstore",welcome_index_path  %>
     </div>
     <div class="navbar-right">
-      <% unless current_user %>
-        <div class= "login-or-register">
-          <% if current_or_guest_user %>
-            <%= link_to 'Login', user_session_path %> 
-          <% end %>
+      <div class= "login-or-register">
+        <% unless current_user %>
+            <%= link_to 'Login ', user_session_path %>
           /
-          <% if current_or_guest_user %>
-            <%= link_to 'Sign up', new_user_registration_path %> 
-          <% end %>        
-        </div> 
-      <% end %>
-      <div class="shopping-cart-icon">
-        <%= link_to cart_path(current_or_guest_user.carts.last) do %>
-          <i class="fas fa-shopping-cart fa-3x"></i>
+            <%= link_to ' Register', new_user_registration_path %>
+        <% else %>
+            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> 
         <% end %>
+      </div>
+      <div class="shopping-cart-icon">
+        <%= link_to cart_path(safe_current_or_guest_user.carts.last) do %>
+          <i class="fas fa-shopping-cart fa-4x"></i>
+        <% end %>
+        <div class="cart-item-count"><%="#{current_or_guest_user.carts.last.items.count}"%></div>
       </div>
     </div>
   </div>
