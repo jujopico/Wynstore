@@ -5,19 +5,15 @@ class Admin::UsersController < Admin::BaseController
 
     def show 
         @user = User.find(params[:id])
-        @orders = @user.orders.map do |order|
+        @orders = @user.orders.preload(:cart).map do |order|
             {
                 id: order.id,
                 total: order.total,
-                items: order.cart.items.map do |item| 
+                items: order.cart.cart_items.preload(:item_size).map do |item| 
                     {
-                        item_name: item.item_name,
-                        item_quantity: item.quantity,
-                        item_sizes: item.item_sizes,
-
-
-                        
-                        
+                        item_name: item.item_size.item.item_name,
+                        item_size: item.item_size.size.size_name,
+                        item_price: item.item_size.item.price,     
                     }
                 end
             }
