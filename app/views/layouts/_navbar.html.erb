@@ -1,14 +1,26 @@
 <nav>
-  <%= link_to "Home", root_url, class: "navbar-brand" %>
-
-  <div>
-      <div>
-        <%= link_to "Items", items_url %>
-      </div>
-      <% if current_or_guest_user %>
-      <div>
-        <%= link_to "My Cart (#{current_or_guest_user.carts.last.items.count})", cart_path(current_or_guest_user.carts.last) %>
-      </div>
+  <div class="navigation-bar">
+    <div class="navbar-logo-name">
+      <%=image_tag("logo.svg") %>
+      <%= link_to "Wynstore",welcome_index_path  %>
+    </div>
+    <div class="navbar-right">
+      <% unless current_user %>
+        <div class= "login-or-register">
+          <% if current_or_guest_user %>
+            <%= link_to 'Login', user_session_path %> 
+          <% end %>
+          /
+          <% if current_or_guest_user %>
+            <%= link_to 'Sign up', new_user_registration_path %> 
+          <% end %>        
+        </div> 
       <% end %>
+      <div class="shopping-cart-icon">
+        <%= link_to cart_path(current_or_guest_user.carts.last) do %>
+          <i class="fas fa-shopping-cart fa-3x"></i>
+        <% end %>
+      </div>
+    </div>
   </div>
 </nav>

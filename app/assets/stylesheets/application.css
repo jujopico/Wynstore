@@ -13,4 +13,10 @@
  *= require_tree .
  *= require_self
  */
+/*
+ *= require font-awesome
+ */
+ a{
+   text-decoration: none;
+ }
 
