@@ -1,5 +1,4 @@
 class ItemsController < ApplicationController
-
   def index
     @items = Item.all.uniq { |item| item.item_ref }
   end
@@ -10,4 +9,3 @@ class ItemsController < ApplicationController
     @reviews = Review.where(item_id: @item.id)
   end
 end
-  
