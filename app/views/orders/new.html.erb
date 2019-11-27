@@ -15,7 +15,9 @@
         </tr>
         <%end%>
         <tr>
-            <td><strong>Grand Total:</strong> $<%= @total %></td>
+            <td><strong>Sub Total</strong> <%= number_to_currency(@total) %>
+            <td><strong>Taxes</strong> <%= number_to_currency(@total * @rates) %>
+            <td><strong>Grand Total:</strong> <%= number_to_currency(@total * (1 + @rates)) %></td>
         </tr>
     </table>
 

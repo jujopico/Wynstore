@@ -5,8 +5,20 @@
     <%= form.text_field :name %>
   </div>
   <div>
-    <%= form.label :shipping_address %>
-    <%= form.text_field :shipping_address %>
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+    <div>
+    <%= form.label :zipcode %>
+    <%= form.text_field :zipcode %>
+  </div>
+    <div>
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+    <div>
+    <%= form.label :state %>
+    <%= form.select :state, @states %>
   </div>
   <div>
     <%= form.label :phone_number %>
@@ -17,8 +29,8 @@
     <%= form.text_field :email %>
   </div>
 
-  <%= hidden_field_tag :user_id, @user.id  %>
-
   <%= form.submit %>
 <% end %>
+
+
 </div>
