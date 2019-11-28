@@ -14,7 +14,7 @@
 
 .discription {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
   margin: 10px;
   border: solid #a7d6f2 1px;
   width: 50%;
@@ -25,6 +25,7 @@
 }
 
 .itme-name-size-price {
+  justify-content: space-around;
   display: flex;
   background-color: #a7d6f2;
   padding: 10px;
