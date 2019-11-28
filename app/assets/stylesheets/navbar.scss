@@ -71,3 +71,20 @@ nav{
   color: #173461;
 }
 
+.shopping-cart-icon {
+  display: flex;
+  align-self: center;
+}
+
+.cart-item-count{
+  background-color: #FDDF48;
+  height: 18px;
+  width: 18px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -13px;
+  font-size: 14px;
+  margin-top: -10px;
+}
