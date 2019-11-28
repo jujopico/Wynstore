@@ -1,0 +1,48 @@
+@import "font-awesome";
+.form {
+  border: solid #a7d6f2 1px;
+  font-family: "DolceVita";
+  letter-spacing: 2px;
+  width: 50%;
+  margin: 0 auto;
+
+}
+
+.sign_up{
+  justify-content: center;
+  display: flex;
+  border: solid #a7d6f2 1px;
+  padding: 10px;
+  margin: 0 auto;
+  color: #173461;
+  width:400px;
+  align-items: center;
+  padding-top: 0;
+  height: 50px;
+  margin-top:2px;
+}
+.guest{
+  background-color: #a7d6f2;
+  height: 30px;
+  justify-content: center;
+  display: flex;
+}
+// .profile {
+//   justify-content: space-around;
+//   display: flex;
+//   background-color: #a7d6f2;
+//   padding: 10px;
+//   margin: 0;
+//   color: #173461;
+//   width: 742px;
+// }
+
+// .total :nth-child(2) {
+//   color: #a7d6f2;
+// }
+
+// .total {
+//   color: #173461;
+//   display: flex;
+//   justify-content: space-around;
+// }
