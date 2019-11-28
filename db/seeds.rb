@@ -9,32 +9,43 @@ sizes = ["XS", "S", "M", "L", "XL"]
 sizes.each { |s| Size.create(size_name: s) }
 
 shirt1 = Item.create(
-  item_name:"Miami Vice Tee", 
-  quantity: 20, 
+  item_name:" Wyncode Miami Vice",  
   item_description:"This design is a nod to the Miami Heat vice jerseys. Let's go Heat!", 
   price:19.99, 
   category:"shirt", 
   design:"Miami Vice",
   item_ref: 'MV-Shirt-1',
-)
-shirt1 = Item.create(
-  item_name:"Miami Vice Tee", 
-  quantity: 20, 
-  item_description:"This design is a nod to the Miami Heat vice jerseys. Let's go Heat!", 
-  price:19.99, 
-  category:"shirt", 
-  design:"Miami Vice",
-  item_ref: 'MV-Shirt-1',
+  itemURL: "https://wynstore-assets.herokuapp.com/images/Artboard_3.png" 
 )
 
 shirt2= Item.create(
-  item_name:"<Developer> Tee", 
-  quantity: 20, 
+  item_name:" Wyncode <Developer>",  
   item_description:"Show off your front-end developer skills with this shirt.", 
-  price:19.99, 
+  price:24.99, 
   category:"shirt", 
   design:"Developer",
   item_ref: 'D-Shirt-1',
+  itemURL:  "https://wynstore-assets.herokuapp.com/images/Artboard_10.png"
+)
+
+shirt3= Item.create(
+  item_name:"Wyncode TA",  
+  item_description:"Show off your front-end developer skills with this shirt.", 
+  price:19.99, 
+  category:"shirt", 
+  design:"TA1",
+  item_ref: 'TA-Shirt-1',
+  itemURL:  "https://wynstore-assets.herokuapp.com/images/Artboard_2.png"
+)
+
+shirt4= Item.create(
+  item_name:"Wyncode <gotHired>",  
+  item_description:"Show off your front-end developer skills with this shirt.", 
+  price:24.99, 
+  category:"shirt", 
+  design:"Hired",
+  item_ref: 'Hired-Shirt-1',
+  itemURL:  "https://wynstore-assets.herokuapp.com/images/Artboard_11.png"
 )
 
 Item.all.each do |item|
