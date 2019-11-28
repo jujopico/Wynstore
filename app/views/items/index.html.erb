@@ -1,7 +1,24 @@
-<h1>Items Index View</h1>
+<span id="title">Wyncode T-shirts</span>
 
- <% @items.each do |item| %>
- <h2><%= link_to  item.item_name, item %></h2>
+<div class="items-info">
+  <% @items.each do |item| %>
+  <div>
+    <div class="container">
+    <span alt="Avatar" class="image"><%= image_tag item.itemURL %></span>
+    <div class="overlay">View Item</div>
+  </div>
+    <div class="item-details">
+      <h2><%= link_to  item.item_name, item %></h2>
+      <% if item.average_rating %>
+        <span style="font-size:35px"><%= ('<i class="fas fa-star" id="ratingstars"></i>'* item.average_rating + '<i class="far fa-star"></i>'* (5 - item.average_rating)).html_safe %></span>
+      <% else %>
+        <span style="font-size:35px">First to Rate!</span>
+      <% end %>
+      <span id="price-tag"><h3>$<%= item.price %></h3></span>
+    </div>
+  </div>
+  <% end %> 
+<div>
 
-<% end %> 
+
 
