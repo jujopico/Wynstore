@@ -4,7 +4,7 @@
     <title>Welcome to Wynstore!</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,600,700&display=swap" rel="stylesheet">
     <script 
       src="https://kit.fontawesome.com/e6601b1b2e.js" 
       crossorigin="anonymous"
@@ -13,16 +13,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://kit.fontawesome.com/0b06feec75.js" crossorigin="anonymous"></script>
   </head>
-
   <body>
     <%= render 'layouts/navbar' %>
-    <% if current_user %>
-     (<%= current_user.email %>)
-     <%= button_to 'Sign Out', destroy_user_session_path, method: :delete %> 
-    <% else %>
-    <%= link_to 'Sign In', new_user_session_path %> 
-    <% end %>
+    <%= render 'layouts/subnavbar' %>
     <%= yield %>
-
   </body>
 </html>
