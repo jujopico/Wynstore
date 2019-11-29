@@ -11,8 +11,8 @@ sizes.each { |s| Size.create(size_name: s) }
 shirt1 = Item.create(
   item_name:" Wyncode Miami Vice",  
   item_description:"This design is a nod to the Miami Heat vice jerseys. Let's go Heat!", 
-  price:19.99, 
-  category:"shirt", 
+  price:24.99, 
+  category:"Shirts", 
   design:"Miami Vice",
   item_ref: 'MV-Shirt-1',
   itemURL: "https://wynstore-assets.herokuapp.com/images/Artboard_3.png" 
@@ -22,7 +22,7 @@ shirt2= Item.create(
   item_name:" Wyncode <Developer>",  
   item_description:"Show off your front-end developer skills with this shirt.", 
   price:24.99, 
-  category:"shirt", 
+  category:"Shirts", 
   design:"Developer",
   item_ref: 'D-Shirt-1',
   itemURL:  "https://wynstore-assets.herokuapp.com/images/Artboard_10.png"
@@ -31,8 +31,8 @@ shirt2= Item.create(
 shirt3= Item.create(
   item_name:"Wyncode TA",  
   item_description:"Show off your front-end developer skills with this shirt.", 
-  price:19.99, 
-  category:"shirt", 
+  price:24.99, 
+  category:"Shirts", 
   design:"TA1",
   item_ref: 'TA-Shirt-1',
   itemURL:  "https://wynstore-assets.herokuapp.com/images/Artboard_2.png"
@@ -42,10 +42,70 @@ shirt4= Item.create(
   item_name:"Wyncode <gotHired>",  
   item_description:"Show off your front-end developer skills with this shirt.", 
   price:24.99, 
-  category:"shirt", 
+  category:"Shirts", 
   design:"Hired",
   item_ref: 'Hired-Shirt-1',
   itemURL:  "https://wynstore-assets.herokuapp.com/images/Artboard_11.png"
+)
+
+shirt5= Item.create(
+  item_name:"Classic Logo Shirt",  
+  item_description:"Simple, but never basic.", 
+  price:24.99, 
+  category:"Shirts", 
+  design:"Classic",
+  item_ref: 'classic-shirt-1',
+  itemURL:  "https://wynstore-assets.herokuapp.com/images/Bluebg_4.png"
+)
+
+sweater1= Item.create(
+  item_name:"Classic Logo Sweater",  
+  item_description:"Stay warm while you show off your Wyncode pride.", 
+  price:44.99, 
+  category:"Sweaters", 
+  design:"Classic",
+  item_ref: 'classic-sweater-1',
+  itemURL:  "https://wynstore-assets.herokuapp.com/images/Bluebg_5.png"
+)
+
+sticker1= Item.create(
+  item_name:"Sticker Pack",  
+  item_description:"A pack of two Wyncode stickers. Put them on your laptop, or wherever else you like!", 
+  price:2.99, 
+  category:"Stickers", 
+  design:"Palm and Art of Code",
+  item_ref: 'sticker-1',
+  itemURL:  "https://wynstore-assets.herokuapp.com/images/Bluebg_6.png"
+)
+
+mug1= Item.create(
+  item_name:"Ceramic Mug",  
+  item_description:"Code all night with this mug by your side. Coffee not included.", 
+  price:9.99, 
+  category:"Mugs", 
+  design:"Classic",
+  item_ref: 'mug-1',
+  itemURL:  "https://wynstore-assets.herokuapp.com/images/Bluebg_1.png"
+)
+
+bottle1= Item.create(
+  item_name:"Water Bottle",  
+  item_description:"Hydration is key.", 
+  price:14.99, 
+  category:"Bottles", 
+  design:"Classic",
+  item_ref: 'mug-1',
+  itemURL:  "https://wynstore-assets.herokuapp.com/images/Bluebg_2.png"
+)
+
+bag1= Item.create(
+  item_name:"Messenger Bag",  
+  item_description:"Tired of carrying around your laptop? This bag can help!", 
+  price:44.99, 
+  category:"Accessories", 
+  design:"Classic",
+  item_ref: 'bag-1',
+  itemURL:  "https://wynstore-assets.herokuapp.com/images/Bluebg_3.png"
 )
 
 Item.all.each do |item|

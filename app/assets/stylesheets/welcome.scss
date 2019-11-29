@@ -4,7 +4,7 @@
   grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  height: 340vh;
+  height: 365vh;
   font-family: 'Open Sans';	
   color: #44494A;
   background-color: #A7D6F2;
@@ -51,7 +51,7 @@
   margin-bottom: 10px;
 }
 
-.welcome-main-hero-box-text > button {
+.see-shirt-btn {
   height: 60px;	
   width: 300px;
   background-color: #44B6E8;  
@@ -106,6 +106,10 @@
   font-weight: bold;	
   letter-spacing: 0.03px;	
   line-height: 18px;
+}
+
+.welcome-main-products {
+  margin-bottom: 2em;
 }
 
 .welcome-main-products, .welcome-main-social {
@@ -190,7 +194,7 @@
 .welcome-main-footer {
   display: flex;
   justify-content: center;
-  height: 40vh;  
+  height: 50vh;  
   color: #173461;	
 }
 
