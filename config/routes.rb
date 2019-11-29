@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
   devise_for :users
   get 'profile', to: 'user#show'
   root 'welcome#index'
+  get 'hello_world', to: 'hello_world#index'
+  get 'items/index'
   resources :items, only: [:index, :show] do 
     resources :reviews, only: [:create]
 end
