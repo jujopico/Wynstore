@@ -1,6 +1,4 @@
 class ApplicationController < ActionController::Base
-  # before_action :authenticate_user!
-  # before_action :set_profile
   helper_method :safe_current_or_guest_user
   before_action :set_cart
 
