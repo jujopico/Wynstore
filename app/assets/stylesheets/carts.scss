@@ -1,4 +1,12 @@
 @import "font-awesome";
+
+
+.shopping-cart-page-title{
+  font-family: "DolceVita";
+  color: #173461;
+  margin-left: 242px;
+}
+
 .display-items-cart {
   border: solid #a7d6f2 1px;
   font-family: "DolceVita";
@@ -8,16 +16,7 @@
   margin: 0 auto;
 }
 
-.discription-cart {
-  display: flex;
-  justify-content:space-around;
-  border: solid #a7d6f2 1px;
-  width: 450px;
-  margin: 2px auto;
-  height: 100px;
-}
-
-.itme-name-size-price-cart {
+.item-name-size-price-cart {
   justify-content: space-around;
   display: flex;
   background-color: #a7d6f2;
@@ -34,4 +33,138 @@
 .checkout{
   display: flex;
   justify-content: center;
+}
+
+.display-items-cart-title{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #A7D6F2;
+}
+
+.shopping-cart-page-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.item-description-wrapper{
+  display: flex;
+  height: 250px;
+  margin-top: 10px;
+}
+
+.item-name{
+  height: 31px;	
+  width: 347px;	
+  color: #44B6E8;	
+  font-family: Rajdhani;	
+  font-size: 30px;	
+  font-weight: bold;	
+  letter-spacing: 0.06px;	
+  line-height: 46px;
+}
+
+.item-description{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  margin-left: 20px;
+}
+
+.item-picture img {	
+  height: 239px;
+  width: 219px;
+  object-fit: cover;
+  margin-left: 20px;
+}
+
+.item-size {
+  height: 25px;
+  width: 55px;
+  color: #333131;	
+  font-family: Rajdhani;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 0.05px;
+  line-height: 38px;
+}
+
+.item-price {
+  height: 25px;
+  width: 55px;
+  color: #333131;	
+  font-family: Rajdhani;
+  font-size: 25px;
+  letter-spacing: 0.05px;
+  line-height: 38px;
+}
+
+.item-separator{
+  color: #44B6E8;	
+  height: 1px;
+  width: 100%;
+}
+
+.cart-subtotal{
+  height: 40px;	
+  width: 100%;
+  color: #1D345E;	
+  font-family: Rajdhani;	
+  font-size: 25px;	
+  font-weight: 600;	
+  letter-spacing: 0.05px;	
+  line-height: 38px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.cart-subtotal{
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+.subtotal-value{
+  margin-right: 25px;
+}
+
+.end-of-item-list{
+  width: 100%;
+  height: 70px;
+  background-color: #a7d6f2;	
+}
+
+.checkout-button{
+  margin-top: 20px;
+  display: flex;
+  background-color:#173461;
+  height: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout-button a {
+  color: white !important;
+}
+
+.continue-shopping{
+  margin-top: 20px;
+  display: flex;
+  background-color:white;
+  height: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  border: solid #a7d6f2 1px;
+}
+
+.continue-shopping a {
+  color: #173461 !important;
 }
