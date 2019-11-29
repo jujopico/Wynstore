@@ -1,16 +1,15 @@
-<h1><%= @user.email %>'s Cart</h1>
+<h3 class="total"><%= @user.email %>'s Cart</h3>
 <% total = 0.0 %>
 <% if @cartItems.present? %>
-<table>
-  <tr>
+<table class= "display-items-cart">
+  <tr  class="itme-name-size-price-cart"> 
     <th>Item Name</th>
     <th>Size</th>
     <th>Price</th>
-    <th></th>
   </tr>
     <% @cartItems.each do |item| %>
       <% total = total + item.item_size.item.price %>
-      <tr>
+      <tr class= "discription-cart"> 
         <td><%= item.item_size.item.item_name %></td>
         <td><%= item.item_size.size.size_name %></td>
         <td>$<%= item.item_size.item.price %></td>
@@ -20,11 +19,9 @@
         </td>
       </tr>
     <%end%>
-    <tr>
-      <td><strong>Grand Total:</strong> $<%= number_to_currency(total)%></td>
-    </tr>
-    <tr>
-      <%= link_to 'Checkout', profiles_path %>
+    <tr class="grand-total">
+      <td><strong>Grand Total:</strong> <%= number_to_currency(total)%>
+      <%= link_to 'Checkout', profiles_path %></td>
     </tr>
 </table>
 <% else %>
