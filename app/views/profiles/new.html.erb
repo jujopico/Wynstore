@@ -1,24 +1,41 @@
-<div>
-<%= form_with(model: @profile, url: profiles_path, method: "post") do |form| %>
-  <div>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-  <div>
-    <%= form.label :shipping_address %>
-    <%= form.text_field :shipping_address %>
-  </div>
-  <div>
-    <%= form.label :phone_number %>
-    <%= form.text_field :phone_number %>
-  </div>
-  <div>
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
+<div class="form"> 
+  <div class= "guest">Guest Checkout</div>
+    <div>
+    <div >
+    <%= form_with(model: @profile, url: profiles_path, method: "post") do |form| %>
+      <div class="sign_up">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+      <div class="sign_up">
+        <%= form.label :address %>
+        <%= form.text_field :address %>
+      </div>
+        <div class="sign_up">
+        <%= form.label :zipcode %>
+        <%= form.text_field :zipcode %>
+      </div>
+        <div class="sign_up">
+        <%= form.label :city %>
+        <%= form.text_field :city %>
+      </div>
+        <div class="sign_up">
+        <%= form.label :state %>
+        <%= form.select :state, @states %>
+      </div>
+      <div class="sign_up">
+        <%= form.label :phone_number %>
+        <%= form.text_field :phone_number %>
+      </div>
+      <div class="sign_up">
+        <%= form.label :email %>
+        <%= form.text_field :email %>
+      </div>
+      <div class="sign_up">
+      <%= form.submit %>
+    <% end %>
 
-  <%= hidden_field_tag :user_id, @user.id  %>
 
-  <%= form.submit %>
-<% end %>
-</div>
+    </div>
+  </div>
+</div> 

@@ -12,9 +12,18 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
+ a {
+   text-decoration: none;
+ }
+
+ body{
+   padding: 0;
+   margin: 0
+ }
 
  @font-face {
-    font-family: 'DolceVita';
-    src: url('https://minio.apps.selfip.com/mymedia/fonts/DolceVita.ttf ') format('truetype');
-  }
+  font-family: 'DolceVita';
+  src: url('https://minio.apps.selfip.com/mymedia/fonts/DolceVita.ttf ') format('truetype');
+}

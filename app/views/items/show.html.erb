@@ -8,25 +8,24 @@
       <%= f.submit size %>
     <% end %>
 <% end %>
+  <img src=<%=@item.itemURL%> />
   <p>Description: <%=@item.item_description%></p>
-  <p>Quantity: <%=@item.quantity%></p>
   <br>
   <h3>Comments</h3>
   <% @item.reviews.each do |review| %>
     Comment: <%= review.comments %><br>
-    Rating: <%= review.rating %>
-    <br>
+    Rating: <%= ('<i class="fas fa-star" id="ratingstars"></i>'* review.rating + '<i class="far fa-star"></i>'* (5 - review.rating)).html_safe %><%= review.rating %><br>    
   <% end %>
   <hr>
   <% if current_user %>
     <%= form_with model: [@item, @item.reviews.build], local: true do |f|  %>
       <div>
         <label> Comments </label>
-        <%= f.text_field :comments %>
+        <%= f.text_field :comments, autocomplete: "off"%>
       </div>
       <div>
         <%= f.label :rating, "Rating" %>
-        <%= f.number_field :rating, min: 1, max: 5, autocomplete: "off" %>
+        <%= f.number_field :rating, min: 1, max: 5, autocomplete: "off"%>
       </div>
       <%= f.submit %>
     <% end %>
