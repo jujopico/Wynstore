@@ -5,7 +5,7 @@ class Item < ApplicationRecord
   has_many :sizes, through: :item_sizes
 
   def average_rating 
-    reviews.reduce(0) { |acc, review| acc + review.rating } / reviews.length if !reviews.empty?
+    (reviews.reduce(0) { |acc, review| acc + review.rating } / reviews.length).round if !reviews.empty?
   end 
 end
 
