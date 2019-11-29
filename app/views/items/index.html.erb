@@ -9,7 +9,7 @@
     <% @items.each do |item| %>
     <div>
       <div class="container">
-      <span class="image"><%= image_tag item.itemURL %></span>
+      <span class="image"><%= link_to image_tag(item.itemURL), item %></span>
       <div class="overlay"><%= link_to 'View Item', item %></div>
     </div>
     <div class="item-details">

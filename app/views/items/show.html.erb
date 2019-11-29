@@ -1,5 +1,4 @@
 <div>
-  <h2>Product Details</h2>
   <h3><%= @item.item_name %></h3>
   <p> Sizes:
   <%= form_with url: cart_items_path do |f| %>
@@ -7,6 +6,7 @@
     <% @sizes.each do |size| %>
       <%= f.submit size %>
     <% end %>
+   QTY: <%= f.number_field :quantity, value: safe_current_or_guest_user.carts.last.items.count, min: 1 %>
 <% end %>
   <img src=<%=@item.itemURL%> />
   <p>Description: <%=@item.item_description%></p>
