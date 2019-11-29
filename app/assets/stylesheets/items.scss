@@ -15,6 +15,7 @@
   color:#173461;
   padding-top: 55px; 
   margin-left: 45px;
+  zoom: 125%;
 }
 
 .items-info{
@@ -28,10 +29,12 @@
   text-align: center;
 }
 
-.items-info h2 a{
+#item-name{
   font-family: 'Rajdhani', sans-serif;
   color: #44B6E8;
   font-size: 35px;
+  margin-top: 0px; 
+  margin-bottom: 50px;
 }
 
 .item-details {

@@ -13,7 +13,7 @@
       <div class="overlay"><%= link_to 'View Item', item %></div>
     </div>
     <div class="item-details">
-      <span style="margin-top: 0px; margin-bottom: 50px; font-size: 35px;"><%= item.item_name %></span>
+      <span id="item-name"><%= item.item_name %></span>
       <% if item.average_rating %>
         <span style="font-size:35px"><%= ('<i class="fas fa-star" id="ratingstars"></i>'* item.average_rating + '<i class="far fa-star"></i>'* (5 - item.average_rating)).html_safe %></span>
       <% else %>
