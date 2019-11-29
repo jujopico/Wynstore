@@ -1,0 +1,37 @@
+@import "font-awesome";
+.display-items-cart {
+  border: solid #a7d6f2 1px;
+  font-family: "DolceVita";
+  letter-spacing: 2px;
+  width: 50%;
+  min-width: 560px;
+  margin: 0 auto;
+}
+
+.discription-cart {
+  display: flex;
+  justify-content:space-around;
+  border: solid #a7d6f2 1px;
+  width: 450px;
+  margin: 2px auto;
+  height: 100px;
+}
+
+.itme-name-size-price-cart {
+  justify-content: space-around;
+  display: flex;
+  background-color: #a7d6f2;
+  padding: 10px;
+  color: #173461;
+  margin:-2px;
+}
+
+.grand-total{
+  display: flex;
+  justify-content: center;
+}
+
+.checkout{
+  display: flex;
+  justify-content: center;
+}
