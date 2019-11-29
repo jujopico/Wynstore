@@ -1,19 +1,20 @@
-.item-details-container {
-  display: flex;
+.items-index-container {
+  display:flex;
   justify-content: center;
+
 }
 
 #ratingstars {
   color:#FEDF48;
 }
 
-.title {
+.main {
   font-family: 'Rajdhani', sans-serif;
   font-size: 50px;
   font-weight: 600;
   color:#173461;
-  margin-left: 296px; 
   padding-top: 55px; 
+  margin-left: 45px;
 }
 
 .items-info{
