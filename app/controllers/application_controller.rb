@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   # before_action :authenticate_user!
   # before_action :set_profile
-  before_action :set_cart
+  # before_action :set_cart
 
   def set_profile
     @profile = current_or_guest_user&.profile || Profile.find_by(id: session[:profile_id]) || Profile.new

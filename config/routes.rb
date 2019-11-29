@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  # get 'welcome/index'
   devise_for :users
   get 'hello_world', to: 'hello_world#index'
   get 'items/index'
