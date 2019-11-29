@@ -1,21 +1,22 @@
-<span id="title">Wyncode T-shirts</span>
-
+<div class="title">
+  Wyncode T-shirts
+<div>
 <div class="items-info">
   <% @items.each do |item| %>
   <div>
     <div class="container">
-    <span alt="Avatar" class="image"><%= image_tag item.itemURL %></span>
-    <div class="overlay">View Item</div>
+    <span class="image"><%= image_tag item.itemURL %></span>
+    <div class="overlay"><%= link_to 'View Item', item %></div>
   </div>
-    <div class="item-details">
-      <h2><%= link_to  item.item_name, item %></h2>
-      <% if item.average_rating %>
-        <span style="font-size:35px"><%= ('<i class="fas fa-star" id="ratingstars"></i>'* item.average_rating + '<i class="far fa-star"></i>'* (5 - item.average_rating)).html_safe %></span>
-      <% else %>
-        <span style="font-size:35px">First to Rate!</span>
-      <% end %>
-      <span id="price-tag"><h3>$<%= item.price %></h3></span>
-    </div>
+  <div class="item-details">
+    <span style="margin-top: 0px; margin-bottom: 50px; font-size: 35px;"><%= item.item_name %></span>
+    <% if item.average_rating %>
+      <span style="font-size:35px"><%= ('<i class="fas fa-star" id="ratingstars"></i>'* item.average_rating + '<i class="far fa-star"></i>'* (5 - item.average_rating)).html_safe %></span>
+    <% else %>
+      <span style="font-size:35px">First to Rate!</span>
+    <% end %>
+    <span id="price-tag"><h3>$<%= item.price %></h3></span>
+  </div>
   </div>
   <% end %> 
 <div>
