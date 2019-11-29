@@ -8,8 +8,8 @@
       <%= f.submit size %>
     <% end %>
 <% end %>
+  <img src=<%=@item.itemURL%> />
   <p>Description: <%=@item.item_description%></p>
-  <p>Quantity: <%=@item.quantity%></p>
   <br>
   <h3>Comments</h3>
   <% @item.reviews.each do |review| %>
