@@ -1,6 +1,9 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.all.uniq { |item| item.item_ref }
+    @items = Item.all
+    @items_by_category = Item.all.group_by { |item| item.category }
+    @category_keys = @items_by_category.keys
+
   end
 
   def show 
