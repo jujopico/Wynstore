@@ -2,7 +2,7 @@
   <div class="items-index-left-margin"></div>
   <div class="main">
     <% @category_keys.each do |category_key| %>
-      <div class="title"><%= category_key %></div>
+      <h2 id="<%= category_key %>"><%= category_key %></h2>
       <div class="items-info">
         <% @items_by_category[category_key].each do |item| %>
           <div>
@@ -17,14 +17,14 @@
               <% else %>
                 <span style="font-size:35px">First to Rate!</span>
               <% end %>
-              <span id="price-tag"><h3>$<%= item.price %></h3></span>
+              <span id="price-tag"><p>$<%= item.price %></p></span>
             </div>
           </div>
         <% end %>
       </div>
     <% end %>
   </div>
-    <div class="items-index-right-margin"></div>
+  <div class="items-index-right-margin"></div>
 <div>
 
 
