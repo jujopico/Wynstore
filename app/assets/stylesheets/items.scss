@@ -84,6 +84,9 @@
   opacity: 1;
 }
 
+.image > img {
+  width: 180.5%;
+}
 .image:hover {
   filter: brightness(130%);
 }
