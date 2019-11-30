@@ -4,10 +4,9 @@
   grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  height: 365vh;
-  font-family: 'Open Sans';	
+  height: 350vh;
+  font-family: 'Open Sans'; 
   color: #44494A;
-  background-color: #A7D6F2;
 }
 
 .welcome-main-hero {
@@ -36,8 +35,8 @@
 } 
 
 .welcome-main-hero-box {
-  height: 18em;	
-  width: 21em;		
+  height: 18em; 
+  width: 21em;    
   background-color: rgba(255, 255, 255, 0.92);
   margin-right: -8em;
   color: #1D345E;
@@ -52,36 +51,36 @@
 }
 
 .see-shirt-btn {
-  height: 60px;	
+  height: 60px; 
   width: 300px;
   background-color: #44B6E8;  
   color: #FFF;
-  font-family: 'Rajdhani';	
-  font-size: 30px;	
-  font-weight: 600;	
-  letter-spacing: 0.06px;	
+  font-family: 'Rajdhani';  
+  font-size: 30px;  
+  font-weight: 600; 
+  letter-spacing: 0.06px; 
   line-height: 46px;
   margin: auto;
   cursor: pointer;
 }
 
 .feature-header {
-  font-family: 'Rajdhani';	
+  font-family: 'Rajdhani';  
   font-size: 30px;
-  letter-spacing: 0.03px;	
+  letter-spacing: 0.03px; 
   line-height: 20px;
 }
 
 .feature-description {
-  font-size: 20px;	
-  font-weight: 600;	
-  letter-spacing: 0.04px;	
+  font-size: 20px;  
+  font-weight: 600; 
+  letter-spacing: 0.04px; 
   line-height: 27px;
 }
 
 .feature-details {
-  font-size: 15px;	
-  letter-spacing: 0.03px;	
+  font-size: 15px;  
+  letter-spacing: 0.03px; 
   line-height: 20px;
 }
 
@@ -95,96 +94,96 @@
 
 .welcome-main-hero-box-banner > h4{
   margin-bottom: 0px;
-  font-family: Arial;	
-  font-size: 16px;	
-  font-weight: bold;	
-  letter-spacing: 0.03px;	
+  font-family: Arial; 
+  font-size: 16px;  
+  font-weight: bold;  
+  letter-spacing: 0.03px; 
   line-height: 18px;
 }
 
 .top-rated {
-  font-size: 16px;	
-  font-weight: bold;	
-  letter-spacing: 0.03px;	
+  font-size: 16px;  
+  font-weight: bold;  
+  letter-spacing: 0.03px; 
   line-height: 18px;
 }
 
 .welcome-main-products {
   margin-bottom: 2em;
+  background-color: #FFF;
 }
 
 .welcome-main-products, .welcome-main-social {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  text-align: center;	color: #173461;	
-  font-family: 'Rajdhani';	
-  font-size: 50px;	
-  font-weight: 600;	
-  letter-spacing: 0.1px;	
+  text-align: center; color: #173461; 
+  font-family: 'Rajdhani';  
+  font-size: 50px;  
+  font-weight: 600; 
+  letter-spacing: 0.1px;  
   line-height: 76px;
+  z-index: 1;
+  margin-bottom: 0;
 }
 
-#white-triange {
-  height: 300px;
-  width: 100vw;
-  background: #1c5c86;
-  color: #fff;
-  position: absolute;
+#triangle {
+  background-image: url('triangle.svg');
+  width: 100%;
+  height: 160%;
   z-index: -10;
-  text-align: center;
-}
-​
-.white-triange:after {
-  background: inherit;
-  bottom: 0;
-  content: '';
-  display: block;
-  height: 50%;
-  left: 0;
   position: absolute;
-  right: 0;
-  transform: skewY(-7.5deg);
-  transform-origin: 100%;
-  z-index: -10;
+  background-repeat: no-repeat;
 }
 
-// #white-triangle {
-  // align-self: flex-end;
-  // width: 0;
-  // height: 0;
-  // border-bottom: 30em solid red;
-  // border-left: 30em solid transparent;
-// }
+#background-logo {
+  width: 8em;
+  height:  8em;
+  z-index: -1;
+  position: absolute;
+  margin-top: 6em;
+  margin-left: -4em;
+}
 
+#background-shapes {
+  width: 9em;
+  z-index: -1;
+  position: absolute;
+  margin-top: 14em;
+  align-self: flex-end;
+  margin-left: 2em;
+}
 
 .products-tile, .social-title {
-  text-align: center;	
-  font-family: 'Rajdhani';	
-  font-size: 50px;	
-  font-weight: 600;	
-  letter-spacing: 0.1px;	
+  text-align: center; 
+  font-family: 'Rajdhani';  
+  font-size: 50px;  
+  font-weight: 600; 
+  letter-spacing: 0.1px;  
   line-height: 76px;
+  margin-bottom: 0;
 }
 
-.products-tiles > img {
+.products-tile > div > img {
+  width: 20%;
   padding-top: 20px;
   padding-bottom: 20px;
+  z-index: 5;
+
 }
 
 .welcome-main-social {
   height: 100vh;
-  background-color: #ffffff;
-
+  z-index: 1;
 }
 
 .welcome-main-social > div {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-around;	
-  font-family: 'Rajdhani';	
-  font-size: 45px;	
-  letter-spacing: 0.09px;	
+  justify-content: space-around;  
+  font-family: 'Rajdhani';  
+  font-size: 45px;  
+  letter-spacing: 0.09px; 
   line-height: 68px;
 }
 
@@ -196,24 +195,24 @@
   display: flex;
   justify-content: center;
   height: 50vh;  
-  color: #173461;	
+  color: #173461; 
+  background-color: #A7D6F2;
 }
 
 .welcome-main-footer > div {
-  margin-top: 1.5em;
+  margin-top: 4em;
   margin-right: 3em;
-  margin-bottom: 1.5em;
 }
 
 .welcome-main-footer > div > p {
   margin-top: 0;
-  font-family: 'Rajdhani';	
-  font-size: 1.5em;	
-  letter-spacing: 0.07px;	
+  font-family: 'Rajdhani';  
+  font-size: 1.5em; 
+  letter-spacing: 0.07px; 
   line-height: 53px;
 }
 
 #welcome-main-footer-title {
-  font-family: 'DolceVita';	
+  font-family: 'DolceVita'; 
   font-size: 45px;
 }
