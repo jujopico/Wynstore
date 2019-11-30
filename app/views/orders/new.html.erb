@@ -14,17 +14,20 @@
             <td>$<%= item.item_size.item.price %></td>
         </tr>
         <%end%>
+        <tr class="checkout-button"></tr>
         <tr class="total">
             <td><strong>Sub Total</strong> <%= number_to_currency(@total) %>
             <td><strong>Taxes</strong> <%= number_to_currency(@total * @rates) %>
             <td><strong>Grand Total:</strong> <%= number_to_currency(@total * (1 + @rates)) %></td>
-        
-    
-       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-amount=<%@total%>
-          data-locale="auto"></script>
+        </tr>
+
+        <tr class= "stripe">
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-description="A month's subscription"
+        data-amount=<%@total%>
+        data-locale="auto"></script>
+
 <% end %>
         </tr>
     </table>
