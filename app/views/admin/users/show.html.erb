@@ -1,18 +1,23 @@
 <div>
-    <h1>Show page for <%= @user.email %></h1>
-    <% @orders.each do |order| %>
+    <h1>Show page for <%= @user.email %></h1
+    <% if @orders.length != 0 %>
+        <% @orders.each do |order| %>
 
-        <h5>Order ID - <%= order[:id] %> Total: <%= order[:total] %></h5>
-        <ul>
-            <% order[:items].each do |item| %>
-                <%= item[:item_name]%>
+            <h2> Order ID - <%= order[:id] %> Total: <%= order[:total] %></h2>
+            <ul>
+                <% order[:items].each do |item| %>
+                    <%= item[:item_name]%>
+                    <br>
+                    <%= item[:item_size]%>
+                    <br>
+                    <%= item[:item_price]%>
                 <br>
-                <%= item[:item_size]%>
-                <br>
-                <%= item[:item_price]%>
-               <br>
 
-            <% end %>
-        </ul>
-    <% end %>
+                <% end %>
+            </ul>
+        <% end %>
+    <%else%>
+        <h1> <%= "No orders"%> </h1>
+    <%end%>
+    <%#console%>
 </div>

@@ -11,6 +11,7 @@ resources :carts, only: [:show] do
 end 
 resources :cart_items, only: [:create, :update, :edit, :destroy]
   namespace :admin do
+    resources :orders, only: [:index, :show]
     root 'users#index'
     resources :users, only: [:index, :show] do 
       member do

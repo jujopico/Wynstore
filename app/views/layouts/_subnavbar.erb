@@ -1,17 +1,35 @@
-<div class="sub-nav">
-  <span id="links-1">
-    <%= link_to 'Home', welcome_index_path %>
-  </span>
-  <span class="arrow"> 
-    > 
-  </span>
-  <span id="links-2">
-    <%= link_to 'T-shirts', items_path %>
-  <span class="arrow"> 
-    > 
-  </span>
-  <span id="links-3">
-    <%= link_to 'Cart', cart_path(safe_current_or_guest_user.carts.last) %>
-  </span>
-<div>
+<% if safe_current_or_guest_user.admin? %>
+    <div class="sub-nav">
+      <span id="links-1">
+        <%= link_to 'Orders', admin_orders_path %>
+      </span>
+      <span class="arrow"> 
+        > 
+      </span>
+      <span id="links-2">
+        <%= link_to 'Users', admin_users_path %>
+      <span class="arrow"> 
+        > 
+      </span>
+    </div>
+  <%else%>
+    <div class="sub-nav">
+      <span id="links-1">
+        <%= link_to 'Home', welcome_index_path %>
+      </span>
+      <span class="arrow"> 
+        > 
+      </span>
+      <span id="links-2">
+        <%= link_to 'T-shirts', items_path %>
+      <span class="arrow"> 
+        > 
+      </span>
+      <span id="links-3">
+        <%= link_to 'Cart', cart_path(safe_current_or_guest_user.carts.last) %>
+      </span>
+    <div>
+<%end%>
+
+
   
