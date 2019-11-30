@@ -1,0 +1,105 @@
+.php-item-container {
+  display: flex;
+}
+
+.pdp-info-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 1200px;
+  margin-left: 280px;
+  margin-top: 60px;
+}
+
+.pdp-hero-pic {
+  zoom: 127.5%;
+}
+
+.pdp-images {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.poses {
+  display: inline-block;
+  grid-gap: 15px;
+}
+
+.pdp-item-price {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  margin-top: 10px;
+}
+
+.size-button {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid #44b6e8;
+  margin-top: 30px;
+}
+
+.pdp-item-name {
+  font-size: 35px;
+  font-family: 'Rajdhani', sans-serif;
+  color: #44B6E8;
+  font-weight: 700;
+}
+
+.pdp-description {
+  font-size: 35px;
+  margin-top: 30px;
+  font-family: 'Rajdhani', sans-serif;
+  margin-right: 150px;
+}
+
+.review-title {
+  font-size: 25px;
+  color: #1d345e;
+  margin-left: 280px;
+}
+
+.review-detail {
+  margin-left: 280px;
+}
+
+.pdp-comments {
+  font-family: 'Rajdhani', sans-serif;
+  border: 2px solid #44b6e8;
+  color: #173461;
+  font-weight: 700;
+  font-size: 25px;
+  height: 230px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.comment-box {
+  border-style: hidden;
+  width: 1050px;
+  height: 35px;
+}
+
+
+.rate-box {
+  border-style: hidden;
+  width: 1050px;
+  height: 35px;
+}
+
+.submit-box {
+  color: #173461;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  border: 2px solid #44b6e8;
+  height: 50px;
+  width: 200px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.pdp-submit {
+  display: flex;
+  justify-content: flex-end;
+}
