@@ -20,7 +20,7 @@ shirt1 = Item.create(
 
 shirt2= Item.create(
   item_name:" Wyncode <Developer>",  
-  item_description:"Show off your front-end developer skills with this shirt.", 
+  item_description:"Show off your full-stack developer skills with this shirt.", 
   price:24.99, 
   category:"Shirts", 
   design:"Developer",
@@ -30,7 +30,7 @@ shirt2= Item.create(
 
 shirt3= Item.create(
   item_name:"Wyncode TA",  
-  item_description:"Show off your front-end developer skills with this shirt.", 
+  item_description:"Wear your heart, and \"TA\", on your sleeve.", 
   price:24.99, 
   category:"Shirts", 
   design:"TA1",
@@ -40,7 +40,7 @@ shirt3= Item.create(
 
 shirt4= Item.create(
   item_name:"Wyncode <gotHired>",  
-  item_description:"Show off your front-end developer skills with this shirt.", 
+  item_description:"Growth mindset is an important part of being a Wyncoder. You WILL get that web dev job!", 
   price:24.99, 
   category:"Shirts", 
   design:"Hired",
