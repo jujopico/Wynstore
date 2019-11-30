@@ -1,30 +1,32 @@
 <div class="items-index-container">
   <div class="items-index-left-margin"></div>
   <div class="main">
-    <div class="title">
-      Wyncode T-shirts
-    </div>
-  <div>
-    <div class="items-info">
-      <% @items.each do |item| %>
-    <div>
-      <div class="container">
-        <span class="image"><%= link_to image_tag(item.itemURL), item %></span>
-        <div class="overlay"><%= link_to 'View Item', item %></div>
-    </div>
-    <div class="item-details">
-      <span id="item-name"><%= item.item_name %></span>
-      <% if item.average_rating %>
-        <span style="font-size:35px"><%= ('<i class="fas fa-star" id="ratingstars"></i>'* item.average_rating + '<i class="far fa-star"></i>'* (5 - item.average_rating)).html_safe %></span>
-      <% else %>
-        <span style="font-size:35px">First to Rate!</span>
-      <% end %>
-      <span id="price-tag"><h3>$<%= item.price %></h3></span>
-    </div>
-    </div>
-    <% end %> 
-  <div>
-    <div class="items-index-right-margin"></div>
+    <% @category_keys.each do |category_key| %>
+      <h2 id="<%= category_key %>"><%= category_key %></h2>
+      <div class="items-info">
+        <% @items_by_category[category_key].each do |item| %>
+          <div>
+            <div class="container">
+              <span class="image"><%= image_tag item.itemURL %></span>
+              <div class="overlay"><%= link_to 'View Item', item %></div>
+            </div>
+            <div class="item-details">
+              <span style="margin-top: 0px; font-size: 35px;"><%= item.item_name %></span>
+              <% if item.average_rating %>
+                <span style="font-size:35px">
+                  <%= ('<i class="fas fa-star" id="ratingstars"></i>'* item.average_rating + '<i class="far fa-star"></i>'* (5 - item.average_rating)).html_safe %>
+                  </span>
+              <% else %>
+                <span id="no-rating">First to Rate!</span>
+              <% end %>
+              <span id="price-tag"><p>$<%= item.price %></p></span>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <div class="items-index-right-margin"></div>
 <div>
 
 
