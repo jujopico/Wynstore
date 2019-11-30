@@ -10,7 +10,7 @@
           <p class="feature-header">Featured Tee</p>
           <p class="feature-description">Limited edition Wyncode <br> tee, get it now.<p>
           <p class="feature-details">Available in all sizes.</p>
-          <%= button_to 'See this shirt', items_path, method: :get, class: 'see-shirt-btn' %>
+          <%= button_to 'See this shirt', Item.find(5), method: :get, class: 'see-shirt-btn' %>
         </div>
       </div>
     </div>
@@ -18,17 +18,17 @@
 
   <div class="welcome-main-products">
     <div class="products-title">
-      <p>Products</p>
+      <p>Product Categories</p>
     </div>
     <div>
-      <%= image_tag("https://wynstore-assets.herokuapp.com/images/Bluebg_4.png", alt: "shirts")%>
-      <%= image_tag("https://wynstore-assets.herokuapp.com/images/Bluebg_5.png", alt: "sweaters")%>
-      <%= image_tag("https://wynstore-assets.herokuapp.com/images/Bluebg_6.png", alt: "stickers")%>
+      <%= link_to image_tag("https://wynstore-assets.herokuapp.com/images/Bluebg_4.png", :alt => "shirts"), items_path %>
+      <%= link_to image_tag("https://wynstore-assets.herokuapp.com/images/Bluebg_5.png", :alt => "sweaters"), Item.find(6) %>
+      <%= link_to image_tag("https://wynstore-assets.herokuapp.com/images/Bluebg_6.png", :alt => "stickers"), Item.find(7) %>
     </div>
     <div>
-      <%= image_tag("https://wynstore-assets.herokuapp.com/images/Bluebg_1.png", alt: "mugs")%>
-      <%= image_tag("https://wynstore-assets.herokuapp.com/images/Bluebg_2.png", alt: "water-bottles")%>
-      <%= image_tag("https://wynstore-assets.herokuapp.com/images/Bluebg_3.png", alt: "accessories")%>
+      <%= link_to image_tag("https://wynstore-assets.herokuapp.com/images/Bluebg_1.png", :alt => "mugs"), Item.find(8) %>
+      <%= link_to image_tag("https://wynstore-assets.herokuapp.com/images/Bluebg_2.png", :alt => "water-bottles"), Item.find(9) %>
+      <%= link_to image_tag("https://wynstore-assets.herokuapp.com/images/Bluebg_3.png", :alt => "accessories"), Item.find(10) %>
     </div>
     <div id="white-triangle">
     </div>
