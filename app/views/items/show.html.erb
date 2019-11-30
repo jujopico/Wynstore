@@ -1,40 +1,94 @@
-<div>
-  <h3><%= @item.item_name %></h3>
-  <p> Sizes:
-  <%= form_with url: cart_items_path do |f| %>
-    <%= hidden_field_tag 'item_id', @item.id  %>
-    <% @sizes.each do |size| %>
-      <%= f.submit size %>
-    <% end %>
-   QTY: <%= f.number_field :quantity, value: safe_current_or_guest_user.carts.last.items.count, min: 1 %>
-<% end %>
-  <img src=<%=@item.itemURL%> />
-  <p>Description: <%=@item.item_description%></p>
-  <br>
-  <h3>Comments</h3>
-  <% @item.reviews.each do |review| %>
-    Comment: <%= review.comments %><br>
-    Rating: <%= ('<i class="fas fa-star" id="ratingstars"></i>'* review.rating + '<i class="far fa-star"></i>'* (5 - review.rating)).html_safe %><%= review.rating %><br>    
-  <% end %>
-  <hr>
-  <% if current_user %>
-    <%= form_with model: [@item, @item.reviews.build], local: true do |f|  %>
-      <div>
-        <label> Comments </label>
-        <%= f.text_field :comments, autocomplete: "off"%>
+<div class="php-item-container">
+<div class="php-item">
+  <div class="pdp-info-container">
+    
+    <div class="pdp-images">
+      <div class="pdp-hero-pic">
+        <img src=<%= @item.itemURL %> />
       </div>
-      <div>
-        <%= f.label :rating, "Rating" %>
-        <%= f.number_field :rating, min: 1, max: 5, autocomplete: "off"%>
+      <div class="poses">
+        <% @poses.each do |pose| %>
+          <%= image_tag pose.image_url %>
+        <% end %>
+      </div>  
+    </div>
+
+    <div class="pdp-details">
+      <div class="pdp-item-name">
+        <%= @item.item_name %>
       </div>
-      <%= f.submit %>
+      <div class="pdp-rating-stars">
+        <% if @item.average_rating %>
+          <span style="font-size: 35px"><%= ('<i class="fas fa-star" id="ratingstars"></i>'* @item.average_rating + '<i class="far fa-star"></i>'* (5 - @item.average_rating)).html_safe %></span>
+        <% else %>
+          <span>First to Rate!</span>
+        <% end %>
+      </div>
+      <div class="pdp-item-price">
+        $<%= @item.price %>
+      </div>
+      <div class="pdp-item-size">
+        <%= form_with url: cart_items_path do |f| %>
+         <%= hidden_field_tag 'item_id', @item.id  %>
+          <% @sizes.each do |size| %>
+            <%= f.submit size, class: "size-button" %>
+          <% end %>
+      </div>
+      <div class="pdp-description">
+        <span style="font-weight: 700">Description: </span><br><%=@item.item_description%>
+      </div>
+        <% end %>
+    </div>
+  </div>
+
+  <div class="feature-items">
+    Feature Items
+    <hr style="width: 150%">
+  </div>
+
+  <div>
+    <div class="review-title">Reviews</div>
+    <hr style="width: 150%">
+    <div class="review-detail">
+    <% @item.reviews.each do |review| %>
+      Comment: <%= review.comments %><br>
+      Rating: <%= ('<i class="fas fa-star" id="ratingstars"></i>'* review.rating.to_i + '<i class="far fa-star"></i>'* (5 - (review.rating || 0)).to_i).html_safe %><%= review.rating %><br>    
     <% end %>
-    <%else%>
-    <%= link_to 'Sign In', new_user_session_path %> <br>
-    or <br>
-    <%= link_to 'Sign Up', new_user_session_path %> <br>
-    To make a comment
-  <%end%>
-</div>
+    <% if current_user %>
+      <%= form_with model: [@item, @item.reviews.build], local: true do |f|  %>
+      <div class="pdp-comments">
+        <div>
+          <label> Comments: </label>
+          <%= f.text_field :comments, autocomplete: "off", class:"comment-box" %>
+        </div>
+        <br>
+        <div >
+          <%= f.label :rating, "Rating:" %>
+          <%= f.number_field :rating, min: 1, max: 5, autocomplete: "off", class:"rate-box"%>
+        </div>
+        <br>
+        <div class="pdp-submit">
+          <%= f.submit class:"submit-box" %>
+        </div>
+      <% end %>
+      </div>
+    <% else %>
+     <%= link_to 'Sign In', new_user_session_path %> <br>
+     or <br>
+     <%= link_to 'Sign Up', new_user_session_path %> <br>
+      To make a comment
+    <% end %>
+    </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
 
 

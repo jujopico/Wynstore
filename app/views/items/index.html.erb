@@ -1,16 +1,16 @@
 <div class="items-index-container">
   <div class="items-index-left-margin"></div>
   <div class="main">
-  <div class="title">
-    Wyncode T-shirts
+    <div class="title">
+      Wyncode T-shirts
     </div>
   <div>
-  <div class="items-info">
-    <% @items.each do |item| %>
+    <div class="items-info">
+      <% @items.each do |item| %>
     <div>
       <div class="container">
-      <span class="image"><%= link_to image_tag(item.itemURL), item %></span>
-      <div class="overlay"><%= link_to 'View Item', item %></div>
+        <span class="image"><%= link_to image_tag(item.itemURL), item %></span>
+        <div class="overlay"><%= link_to 'View Item', item %></div>
     </div>
     <div class="item-details">
       <span id="item-name"><%= item.item_name %></span>

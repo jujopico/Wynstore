@@ -1,7 +1,6 @@
 .items-index-container {
   display:flex;
   justify-content: center;
-
 }
 
 #ratingstars {
@@ -29,7 +28,7 @@
   text-align: center;
 }
 
-#item-name{
+#item-name {
   font-family: 'Rajdhani', sans-serif;
   color: #44B6E8;
   font-size: 35px;
@@ -83,3 +82,4 @@
 .image:hover {
   filter: brightness(130%);
 }
+
