@@ -1,0 +1,40 @@
+.log-in-form{
+  height: 541px;	
+  width: 500px;
+  border: solid #9BD7F5 1px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 82px;
+  margin-left: 300px;
+}
+
+.log-in-title{
+  margin-left: -1px;
+  width: 500px;
+  height: 45px;
+  color: #0D3464;
+  background-color: #A7D6F2;
+  margin-top: -60px;
+  display: flex;
+  align-content: center;
+  margin-bottom: 5px;
+  font-family: 'DolceVita';
+}
+
+.log-in-title h2{
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+
+.field{
+  font-family: 'DolceVita';
+  color: #173461;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.actions{
+  margin-left: 20px;
+  margin-right: 20px;
+}
