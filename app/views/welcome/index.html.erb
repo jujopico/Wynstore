@@ -1,4 +1,38 @@
 <div class="welcome-main">
+  <div class="nav-container">
+    <ul class="nav-items">
+      
+      <li class="nav-item nav-item-dropdown">
+        <a class="dropdown-trigger">Apparel</a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-menu-item">
+              <%= link_to "Shirts", "/items" %>
+              <%= link_to "Sweaters", "/items/6" %>
+            </li>
+          </ul>
+      </li>
+      
+      <li class="nav-item nav-item-dropdown">
+        <a class="dropdown-trigger">Drinkware</a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-menu-item">
+              <%= link_to "Mugs", "/items/8" %>
+              <%= link_to "Bottles", "/items/9" %>
+            </li>
+          </ul>
+      </li>
+      
+      <li class="nav-item nav-item-dropdown">
+        <a class="dropdown-trigger">Accessories</a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-menu-item">
+              <%= link_to "Bags", "/items/10" %>
+              <%= link_to "Stickers", "/items/7" %>
+            </li>
+          </ul>
+      </li>
+    </ul>
+  </div>
   <div class="welcome-main-hero">
     <div class="welcome-main-hero-image">
       <div class="welcome-main-hero-box">
