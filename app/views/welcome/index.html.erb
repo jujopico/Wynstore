@@ -1,5 +1,20 @@
 <div class="welcome-main">
 
+<div class="nav-container">
+  <ul class="nav-items">
+    <li class="nav-item nav-item-dropdown">
+      <a class="dropdown-trigger" href="#">Apparel</a>
+      <ul class="dropdown-menu">
+      <% @category_keys.each do |category| %>
+        <li class="dropdown-menu-item">
+          <a href="/items/id"><%= link_to category, items_path %></a>
+        </li>
+      <% end %>
+      </ul>
+    </li>
+  </ul>
+</div>
+
   <div class="welcome-main-hero">
     <div class="welcome-main-hero-image">
       <div class="welcome-main-hero-box">
