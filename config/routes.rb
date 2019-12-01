@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'profile', to: 'user#show'
   root 'welcome#index'
-  resources :welcome, onle: [:index, :show]
+  resources :welcome, only: [:index, :show]
   resources :items, only: [:index, :show] do 
     resources :reviews, only: [:create]
 end
