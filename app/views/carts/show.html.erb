@@ -32,7 +32,11 @@
   </div>
   <div class="end-of-item-list"></div>
   <div class="checkout-button">
-    <%= link_to 'Checkout', profiles_path %>
+  <% if @profile %>
+    <%= link_to 'Checkout', new_cart_order_path(@cart) %>
+  <% else %>
+      <%= link_to 'Checkout', profiles_path %>
+  <% end%>
   </div>
   <div class="continue-shopping">
     <%= link_to "Continue Shopping", items_path%>
