@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 2019_11_29_225413) do
   create_table "orders", force: :cascade do |t|
     t.string "shipping_info_id"
     t.float "total"
-    t.integer "order_status"
+    t.integer "order_status", default: 0
     t.bigint "cart_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
