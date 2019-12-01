@@ -218,16 +218,14 @@
 }
 
 .nav-container {
+  display: flex;
+  justify-content: space-around;
   background-color: #fff;
-  display: block;
-  margin: 0 auto;
-  max-width: 400px;
   padding: 1em;
   text-align: center;
 }
 
-ul,
-li {
+ul,li {
   list-style: none;
   -webkit-padding-start: 0;
 }
