@@ -10,5 +10,6 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @sizes = @item.sizes.map { |size| size.size_name }
     @reviews = Review.where(item_id: @item.id)
+    @poses = @item.item_images
   end
 end
