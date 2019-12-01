@@ -1,29 +1,59 @@
-<h2>Sign up</h2>
+<div class = "container">
+<div class="container-registration">
+<div class= "sign-up"><h2 class= "sign-up-div" >Registration</h2></div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="google-buttom">
+  <div class="google-buttom-container">
   </div>
+  </div>
+  <div class="or">
+  <hr>
+  <div class= "o">or</div>
+  <hr>
+  </div>
+<div class="form-s">
+<div class="user">
+     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+     <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
+     <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+     </div>
+
+     <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+     </div>
 
-  <div class="field">
+      <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+      </div>
+      
+      <div class= "form-checkbox">
+  <form>
+  <input type="checkbox" id="fruit1" name="fruit-1" value="Apple">
+  <label for="fruit1">Keep me sign in</label>
+  <input type="checkbox" id="fruit2" name="fruit-2" value="Banana">
+  <label for="fruit2">sign me up for the wynstore news and to receive excluse offer</label>
+  <input type="checkbox" id="fruit3" name="fruit-3" value="Cherry">
+  <label for="fruit3">by clicking create account, you acknowledge you have read and agreed to our terms of use and privacy policy</label>
+</form>
+</div>
+  
+       <div class="actions">
+        <%= f.submit "Sign up" %>
+       </div>
+        <% end %>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+        <%= render "devise/shared/links" %>
 
-<%= render "devise/shared/links" %>
+
+</div>
+</div>
+</div>
+</div>

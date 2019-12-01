@@ -18,6 +18,11 @@ shirt1 = Item.create(
   itemURL: "https://wynstore-assets.herokuapp.com/images/Artboard_3.png" 
 )
 
+Item.find(1).item_images.create(image_url: "https://wynstore-assets.herokuapp.com/images/Artboard_1.jpg", pose: "back")
+Item.find(1).item_images.create(image_url: "https://wynstore-assets.herokuapp.com/images/Artboard_9.png", pose: "main")
+Item.find(1).item_images.create(image_url: "https://wynstore-assets.herokuapp.com/images/Artboard_8.png", pose: "symbol")
+Item.find(1).item_images.create(image_url: "https://wynstore-assets.herokuapp.com/images/Artboard_7.png", pose: "moto")
+
 shirt2= Item.create(
   item_name:" Wyncode <Developer>",  
   item_description:"Show off your full-stack developer skills with this shirt.", 
