@@ -18,5 +18,7 @@ class Admin::UsersController < Admin::BaseController
                 end
             }
         end
-    end 
+        @profile = User.find(params[:id]).profile
+    end
+
 end
