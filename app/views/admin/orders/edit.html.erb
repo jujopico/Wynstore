@@ -1,0 +1,11 @@
+<div>
+    <h1>Order Page</h1>
+		<p><%= @order.id%></p>
+		<p><%= @order.user.email %></p>
+		<p><%= @order.total%></p>
+        <%= form_with url: admin_order_path(@order), method: 'patch', local: true do |form|  %>
+            <%= form.select :order_status, options_for_select(@statuses, @order.order_status_before_type_cast) %>
+            <p><%= @order.created_at%></p>
+            <%= form.submit 'Update Order' %>
+        <% end %>
+</div>
