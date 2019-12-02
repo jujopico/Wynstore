@@ -4,7 +4,7 @@ User.destroy_all
 Review.destroy_all
 Size.destroy_all
 
-sizes = ["XS", "S", "M", "L", "XL"]
+sizes = ["XS", "S", "M", "L", "XL", "Add"]
 
 sizes.each { |s| Size.create(size_name: s) }
 
@@ -113,9 +113,18 @@ bag1= Item.create(
   itemURL:  "https://wynstore-assets.herokuapp.com/images/Bluebg_3.png"
 )
 
+# Item.all.each do |item|
+#   Size.all.each { |size| ItemSize.create(item_id: item.id, size_id: size.id) }
+# end
+
 Item.all.each do |item|
-  Size.all.each { |size| ItemSize.create(item_id: item.id, size_id: size.id) }
-end
+  if item.category == "Shirts" || item.category == "Sweaters"
+    5.times do |size| ItemSize.create(item_id: item.id, size_id: (size+1)) 
+    end
+  else
+    ItemSize.create(item_id: item.id, size_id: 6)
+  end
+ end
 
 review1 = Review.create(
   rating: 5,
