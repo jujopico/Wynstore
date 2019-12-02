@@ -19,10 +19,11 @@
               <div class="item-name"><%= item.item_size.item.item_name %></div>
               <div class="item-size"><%= item.item_size.size.size_name %></div>
               <div class="item-price">$<%= item.item_size.item.price %></div>
-              <div class="item-delete">
+              <div >
                       <%= button_to 'Delete Item', cart_item_path(item),
                       method: :delete,
-                      data: { confirm: 'Are you sure?' } %>
+                      data: { confirm: 'Are you sure?' },
+                      class: "item-delete" %>
               </div>
             </div>
             <div class="item-separator"></div>
