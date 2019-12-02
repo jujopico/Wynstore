@@ -10,6 +10,18 @@
         <%= form.select :order_status, options_for_select(@statuses, @order.order_status_before_type_cast) %>
             <p><strong>Order Created: </strong><%= @order.created_at.strftime("%-m/%-d/%y")%></p>
             <p><strong>Items in Order:</strong>
+            <p>
+                <span>Item Name</span>|
+                <span>Item Price</span>|
+                <span>Item Size</span>
+            </p>
+            <%@order.cart.cart_items.each do |item|%>
+            <p>
+                <span><%= item.item_size.item.item_name%>|</span>
+                <span><%= item.item_size.item.price%>|</span>
+                <span><%= item.item_size.size.size_name%></span>
+            </p>
+            <%end%>
             <%= form.submit 'Update Order' %>
         <% end %>
 </div>
