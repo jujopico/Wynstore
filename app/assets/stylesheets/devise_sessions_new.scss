@@ -1,40 +1,93 @@
-.log-in-form{
-  height: 541px;	
-  width: 500px;
-  border: solid #9BD7F5 1px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 82px;
-  margin-left: 300px;
-}
-
-.log-in-title{
-  margin-left: -1px;
-  width: 500px;
-  height: 45px;
-  color: #0D3464;
-  background-color: #A7D6F2;
-  margin-top: -60px;
-  display: flex;
-  align-content: center;
-  margin-bottom: 5px;
-  font-family: 'DolceVita';
-}
-
-.log-in-title h2{
-  margin-left: 5px;
-  margin-bottom: 2px;
-}
-
-.field{
-  font-family: 'DolceVita';
+.login-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
   color: #173461;
-  font-size: 20px;
-  margin-top: 20px;
+  }
+
+.login-main-contents {
+  width: 30em;
+  grid-area: 1 / 2 / 2 / 3; 
+  border: #9BD7F5 1px solid;
+  margin-top: 5em;
 }
 
-.actions{
-  margin-left: 20px;
-  margin-right: 20px;
+.login-header {
+  background-color: #9BD7F5;
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+  font-family: 'Rajdhani';
+}
+
+.login-header > h1 {
+  margin: 0;
+}
+
+.login-form {
+  padding: 2em;
+  color: #173461; 
+}
+
+.field,  > input {
+  padding: 10px;
+  width: 95%;
+  margin: 10px 0;
+  font-size: 20px;  
+}
+
+.login-fields {
+  font-family: 'Rajdhani';  
+  font-size: 30px;  
+  font-weight: 500; 
+  letter-spacing: 0.07px; 
+  line-height: 53px;
+  margin: 0;
+}
+
+.login-fields > p {
+  margin: 0;
+}
+
+.login-box {
+  height:2em;
+  font-size:14pt;
+  font-family: 'Rajdhani';
+}
+
+.login-email-box {
+  width: 20em;
+}
+
+.form-checkbox {
+  font-family: 'Open Sans'; 
+  color: #44494A;
+}
+
+.login-remember {
+  font-family: 'Open Sans'; 
+  color: #44494A;
+  margin-bottom: 1em;
+}
+
+.login-button {
+  height: 3rem; 
+  width: 25.5rem; 
+  background-color: #44B6E8;
+  font-family: 'Rajdhani';  
+  font-size: 30px;  
+  font-weight: 500; 
+  margin-bottom: 1em;
+}
+
+.login-devise {
+  font-family: 'Rajdhani';  
+  font-size: 30px;  
+  font-weight: 500; 
+  letter-spacing: 0.07px; 
+  line-height: 53px;
+  margin: 0;
+  padding: 0;
 }
