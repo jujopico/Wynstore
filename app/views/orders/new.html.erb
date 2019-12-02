@@ -1,3 +1,6 @@
+<%= render 'layouts/navbar' %>
+<%= render 'layouts/subnavbar' %>
+
 <%= form_with model: [@cart, @order], local: true do |form| %>
     <%= hidden_field_tag 'cart_id', @cart.id  %>
     <table class= "display-items">
