@@ -2,29 +2,29 @@
   <div class="registration-main-contents">
     <div class="sign-up-user">
       <div class="sign-up-user-header">
-        <h2>Registration</h2>
+        <h1>Become a Wynthusiast!</h1>
       </div>
+      <div class="sign-up-user-form">
+
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
-      <div class="sign-up-field">
+      <p class="sign-up-user-fields">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-      </div>
-
-      <div class="sign-up-field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "box email-box" %>
+      </p>
+      <p class="sign-up-user-fields">
         <%= f.label :password %>
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
         <% end %><br />
-        <%= f.password_field :password, autocomplete: "new-password" %>
-      </div>
-
-      <div class="sign-up-field">
+        <%= f.password_field :password, autocomplete: "new-password", class: "box" %>
+      </p>
+      <p class="sign-up-user-fields">
         <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-      </div>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "box" %>
+      </p>
 
-      <div class= "form-checkbox">
+      <p class= "form-checkbox">
         <form>
           <input class="sign-up-input" type="checkbox" id="fruit1" name="fruit-1" value="Apple">
             <label for="fruit1">Keep me signed in.</label>
@@ -35,18 +35,19 @@
           <input class="sign-up-input" type="checkbox" id="fruit3" name="fruit-3" value="Cherry">
             <label for="fruit3">I have read and agreed to Wynstore's terms of use and privacy policy.</label>
         </form>
-      </div>
+      </p>
 
-      <div class="actions">
-        <%= f.submit "Sign up" %>
-      </div>
+      <p class="actions">
+        <%= f.submit "Sign up", class: "register-button" %>
+      </p>
 
-      <div>
+      <div class="register-log-in">
         <% end %>
         <br />
-        <%= render "devise/shared/links" %>
+        <%= render "devise/shared/links"%>
       </div>
-      
+
+      </div>
     </div>
   <div>
 </div>
