@@ -2,7 +2,7 @@
   "name": "final_project_template",
   "private": true,
   "dependencies": {
-    "@babel/preset-react": "^7.7.0",
+    "@babel/preset-react": "^7.7.4",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
@@ -10,8 +10,8 @@
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "ngrok": "^3.2.5",
     "prop-types": "^15.7.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-on-rails": "11.3.0",
     "turbolinks": "^5.2.0"
   },

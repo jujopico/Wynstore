@@ -12,7 +12,6 @@
         <% end %>
       </div>  
     </div>
-
     <div class="pdp-details">
       <div class="pdp-item-name">
         <%= @item.item_name %>
@@ -43,12 +42,13 @@
 
   <div class="feature-items">
     Feature Items
-    <hr style="width: 150%">
+    <hr>
+    <%= react_component "Carousel" %>
   </div>
 
   <div>
     <div class="review-title">Reviews</div>
-    <hr style="width: 150%">
+    <hr>
     <div class="review-detail">
     <% @item.reviews.each do |review| %>
       Comment: <%= review.comments %><br>
@@ -59,12 +59,12 @@
       <div class="pdp-comments">
         <div>
           <label> Comments: </label>
-          <%= f.text_field :comments, autocomplete: "off", class:"comment-box" %>
+          <%= f.text_field :comments, autocomplete: "off", class:"comment-box", required: true %>
         </div>
         <br>
         <div >
           <%= f.label :rating, "Rating:" %>
-          <%= f.number_field :rating, min: 1, max: 5, autocomplete: "off", class:"rate-box"%>
+          <%= f.number_field :rating, min: 1, max: 5, autocomplete: "off", class:"rate-box", required: true %>
         </div>
         <br>
         <div class="pdp-submit">
@@ -81,14 +81,3 @@
     </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
