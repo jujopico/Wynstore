@@ -1,148 +1,93 @@
-@import "font-awesome";
+.registration-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  color: #173461;
+  }
 
-
-
-
-.container-registration {
-    
-    border: #9BD7F5 1px solid;	
-    width: 500px;
-    display: grid;
-    grid-template-columns: 500px;
-    grid-template-rows: 45px 120px 20px 600px;
-    margin-left: 150%;
-    margin-top: 20%;;
+.registration-main-contents {
+  width: 30em;
+  grid-area: 1 / 2 / 2 / 3; 
+  border: #9BD7F5 1px solid;
+  margin-top: 5em;
 }
-    
-    
-.sign-up {
-    
-    font-size: 20px;
-    margin-top: 0%;
-    grid-column: 1/2;
-    grid-row: 1/2;
-    background-color: #A7D6F2;
-    display: flex;
-    align-items: center;
-    font-family: 'DolceVita';
-  letter-spacing: 1px;
-}
-    
-
-.sign-up-div { 
-    margin-left:10px;
-    color: #173461;
+.sign-up-user-header {
+  background-color: #9BD7F5;
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+  font-family: 'Rajdhani';
 }
 
-.google-buttom {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    display: flex;
-    border: white 1px solid;
-    align-items: center;
-    justify-content: center;
+.sign-up-user-header > h1 {
+  margin: 0;
 }
 
-.google-buttom-container {
-    background-image: url('Sign-up.png');
-    height: 40px;
-    width: 90%;
-    border: #44B6E8 1px solid;
-    background-repeat: no-repeat;
-    background-size:contain;}
-
-.my-signin2 { width:100%;
+.sign-up-user-form {
+  padding: 2em;
+  color: #173461;	
 }
 
-.or {
-    grid-column:1/2;
-   grid-row: 3/4;
-   display: flex;
-   border: white 1px solid;
-   align-items: center;
-}
-
-.o{
-    width: 25px;
-    height: 25px;
-    border: white 1px solid;
-    margin-left:30px;
-    margin-right: 30px;
-    font-size: 20px;
-    font-family: 'DolceVita';
-  letter-spacing: 1px;
-    color: #173461;
-    text-align: center;
-    vertical-align: middle;
-}
-
-hr {
-    border: 0;
-    border-top: 1px solid #9BD7F5; 
-    border-bottom: 1px solid #9BD7F5;
-    height:0;
-    width: 80%;
-    margin: 0%;
-    }
-    .form-s {
-        grid-column: 1/2;
-        grid-row: 4/5;
-        border: white 1px solid;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-.user { width: 90%;
-margin:0%;
-font-size: 20px;
-font-family: 'DolceVita';
-letter-spacing: 1px;
-color: #173461;
-}
-
-input{ 
+.sign-up-user-form > input {
     padding: 10px;
     width: 95%;
     margin: 10px 0;
-    font-size: 20px;
-    }
+    font-size: 20px;  
+}
 
-    input[type=checkbox] + label {
-        display: block;
-        margin: 0.2em;
-        cursor: pointer;
-        padding: 0.2em;
-      }
-      
-      input[type=checkbox] {
-        display: none;
-      }
-      
-      input[type=checkbox] + label:before {
-        content: "\2714";
-        border: 1px solid #A7D6F2;
-        border-radius: 50%;
-        margin-right: 5px;
-        color: transparent;
-        transition: .2s;
-      }
-      
-      input[type=checkbox] + label:active:before {
-        transform: scale(0);
-      }
-      
-      input[type=checkbox]:checked + label:before {
-        background-color: #173461;
-        border-color:  #173461;
-        color: #fff;
-      }
-    
-      .form-checkbox{
-          font-size: 15px;}
+.sign-up-user-fields {
+  font-family: 'Rajdhani';	
+  font-size: 30px;	
+  font-weight: 500;	
+  letter-spacing: 0.07px;	
+  line-height: 53px;
+  margin: 0;
+}
 
-          input[type=submit]{
-            width: 100%;
-            font-size: 25px;
-            background-color:#44B6E8;
-            color: white;}
+.sign-up-user-fields > p {
+  margin: 0;
+}
+
+.sign-up-user-fields > em {	
+  font-size: 20px;	
+}
+
+.actions {
+  margin: 0;
+}
+
+.box {
+  height:2em;
+  font-size:14pt;
+  font-family: 'Rajdhani';
+}
+
+.email-box {
+  width: 20em;
+}
+
+.form-checkbox {
+  font-family: 'Open Sans'; 
+  color: #44494A;
+}
+
+.register-button {
+  height: 3rem;	
+  width: 25.5rem;	
+  background-color: #44B6E8;
+  font-family: 'Rajdhani';	
+  font-size: 30px;	
+  font-weight: 500;	
+}
+
+.register-log-in {
+  font-family: 'Rajdhani';	
+  font-size: 30px;	
+  font-weight: 500;	
+  letter-spacing: 0.07px;	
+  line-height: 53px;
+  margin: 0;
+  padding: 0;
+}
