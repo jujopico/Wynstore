@@ -53,6 +53,14 @@
   border: 1px solid #44b6e8;
   margin-top: 30px;
   padding: 0 12px !important;
+  transition: background-color, color 0.2s ease-out;
+}
+
+.size-button:hover{
+  color: white;
+  background-color: #44b6e8 ;
+  cursor: pointer;
+  transition: background-color, color 0.2s ease-out;
 }
 
 .pdp-item-name {
