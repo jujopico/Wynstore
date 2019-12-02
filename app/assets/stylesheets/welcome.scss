@@ -60,29 +60,34 @@
   margin: auto;
   cursor: pointer;
 }
+
 .feature-header {
   font-family: 'Rajdhani';  
   font-size: 30px;
   letter-spacing: 0.03px; 
   line-height: 20px;
 }
+
 .feature-description {
   font-size: 20px;  
   font-weight: 600; 
   letter-spacing: 0.04px; 
   line-height: 27px;
 }
+
 .feature-details {
   font-size: 15px;  
   letter-spacing: 0.03px; 
   line-height: 20px;
 }
+
 .welcome-main-hero-box-banner {
   width: 150px;
   background-color: #FEDF48;
   margin-left: 11em;
   text-align: center;
 }
+
 .welcome-main-hero-box-banner > h4{
   margin-bottom: 0px;
   font-family: Arial; 
@@ -91,6 +96,7 @@
   letter-spacing: 0.03px; 
   line-height: 18px;
 }
+
 .top-rated {
   font-size: 16px;  
   font-weight: bold;  
@@ -177,6 +183,7 @@
 .welcome-main-social > img element.style {
   width: 80%;
 }
+
 .welcome-main-footer {
   display: flex;
   justify-content: center;
@@ -184,6 +191,7 @@
   color: #173461; 
   background-color: #A7D6F2;
 }
+
 .welcome-main-footer > div {
   margin-top: 4em;
   margin-right: 3em;
@@ -206,6 +214,7 @@
   background-color: #fff;
   padding: 1em;
   text-align: center;
+  margin-top: 80px;
 }
 
 ul,li {
@@ -214,9 +223,14 @@ ul,li {
 }
 
 //Navigation menu
-.nav-item {
+.nav-items {
   display: inline;
-  padding: 1em;
+  font-size: 30px;
+  font-weight: 700;
+  width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  color: #1d345e;
 }
 
 //Dropdown menu
@@ -238,7 +252,7 @@ ul,li {
   }
 
   &::after {
-    color: #ED3E44;
+    color: white;
     content: "›";
     font-size: 24px;
     font-weight: bold;
@@ -257,7 +271,7 @@ ul,li {
   position: absolute;
   right: -10px;
   text-align: right;
-  top: 2.5rem;
+  margin-top: 0;
   transition: opacity 0.5s ease;
   width: 180px;
 }
@@ -266,9 +280,10 @@ ul,li {
   cursor: pointer;
   padding: 1em;
   text-align: center;
-
-  &:hover {
-    background-color: #ccc;
+  font-family: 'Rajdhani'; 
+  font-weight: 100;
+  a {
+    color: #1d345e;
   }
 }
 
