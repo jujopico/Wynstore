@@ -1,3 +1,18 @@
+.carousel-container {
+  display: grid;
+  grid-template-columns: 60px auto 60px;
+}
+
+.carousel-images {
+  display: flex;
+  justify-content: space-around;
+}
+
+.carousel-image {
+  height: 220px;
+  width: 220px;
+}
+
 .php-item-container {
   display: flex;
 }
@@ -53,6 +68,18 @@
   margin-right: 150px;
 }
 
+.feature-title {
+  font-size: 25px;
+  color: #1d345e;
+  margin-top: 50px;
+  margin-left: 280px;
+}
+
+.feature-items {
+  padding: 0 80px 0 80px;
+  margin: 50px 0 50px 10px;
+}
+
 .review-title {
   font-size: 25px;
   color: #1d345e;
@@ -60,7 +87,7 @@
 }
 
 .review-detail {
-  margin-left: 280px;
+  margin: 50px -30px 50px 200px;
 }
 
 .pdp-comments {
@@ -70,22 +97,22 @@
   font-weight: 700;
   font-size: 25px;
   height: 230px;
-  margin-top: 20px;
+  margin-top: 50px;
   margin-bottom: 20px;
   padding: 15px;
+  width: 1000px;
 }
 
 .comment-box {
   border-style: hidden;
-  width: 1050px;
+  width: 800px;
   height: 35px;
   font-size: 25px;
 }
 
-
 .rate-box {
   border-style: hidden;
-  width: 1050px;
+  width: 800px;
   height: 35px;
   font-size: 25px;
 }
