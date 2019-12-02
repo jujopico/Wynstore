@@ -1,0 +1,22 @@
+.admin {
+  font-family: 'Open Sans'; 
+  color: #1D345E;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3em;
+}
+
+.all-orders-table {
+  border: 1px solid black;
+ 
+}
+
+.all-orders-table th {
+  background-color: #A7D6F2;
+}
+
+.users-list > a:nth-child(even) {
+  background-color: #A7D6F2;
+  margin: .5rem 0 .5rem 0;
+}
