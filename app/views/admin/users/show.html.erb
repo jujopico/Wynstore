@@ -1,4 +1,4 @@
-<div>
+<div class="admin user-profile">
     <h1>Show page for <%= @user.email %></h1>
     <%if  @profile.present? %>
         <p>Name: <%= @profile.name %></p>
@@ -23,8 +23,7 @@
                     <%= item[:item_size]%>
                     <br>
                     <%= item[:item_price]%>
-                <br>
-
+                    <br>
                 <% end %>
             </ul>
     <%end%>

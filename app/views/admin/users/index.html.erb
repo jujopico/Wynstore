@@ -1,6 +1,12 @@
-<h2>Users</h2>
+<div class="admin users-list">
+  <h1>Users</h1>
 
-<% @users.each do |user|%>
-<li><%= link_to user.email, admin_user_path(user) %></li>
-
-<% end %>
+  <table class="users-list-table">
+  <% @users.each do |user|%>
+    <tr>
+        <%= link_to user.email, admin_user_path(user) %>
+    </tr> 
+  <% end %>
+      
+  </table>
+</div>
