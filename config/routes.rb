@@ -12,7 +12,7 @@ end
 resources :cart_items, only: [:create, :update, :edit, :destroy]
   namespace :admin do
     resources :orders, only: [:index, :show, :edit, :update]
-    root 'users#index'
+    root 'orders#index'
     resources :users, only: [:index, :show] do 
       member do
     resources :orders, only: [:index, :show]
