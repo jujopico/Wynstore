@@ -7,9 +7,9 @@ class OrdersController < ApplicationController
     end
 
     def new 
-        client = Taxjar::Client.new(api_key: "2406573fd9359f2f0e1fd6410c607428")
-        @profile = safe_current_or_guest_user.profile
+        client = Taxjar::Client.new(ENV['TAX_KEY'])
         @rates = client.rates_for_location(@profile.zipcode).combined_rate
+        @profile = safe_current_or_guest_user.profile
         @cart = Cart.find(params[:cart_id])
         @cart_items = @cart.cart_items
         @total = @cart.items.reduce(0) { |acc, item| acc + item.price.round(2) }
