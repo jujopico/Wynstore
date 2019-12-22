@@ -1,20 +1,7 @@
-# Final Project: Before You Can Start!
 
-## TODO: Submit your wireframes in the form of a pull request
+## Website Address
 
-This example wireframe lives in `readme_assets/wireframe_example.jpg`
-
-Swap it out with your actual wireframes...
-
-![Wireframe Example](readme_assets/wireframe_example.jpg)
-
-## TODO: Submit your ERD in the form of a pull request
-
-This example Entity Relational Diagram lives in `readme_assets/erd_example.png`
-
-![ERD Example](readme_assets/erd_example.png)
-
-Swap it out with your actual ERD...
+http://wynstore.herokuapp.com/
 
 # README
 
@@ -68,8 +55,4 @@ This is a boilerplate Rails project that uses:
 
 ![](readme_assets/images/wynstore_erd.png)
 
-
-## Website Address
-
-http://wynstore.herokuapp.com/
 
