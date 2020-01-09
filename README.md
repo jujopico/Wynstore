@@ -19,4 +19,4 @@ http://wynstore.herokuapp.com/
 1. `rails db:drop db:creat db:migrate` 
 2. `bundle`
 3. `yarn`
-4.  `rails s` or `PORT = **** rails s`
+4.  `rails s`
